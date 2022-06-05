@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
+
 
 public class CharacterSelectButtons : MonoBehaviour
 {
@@ -25,21 +27,31 @@ public class CharacterSelectButtons : MonoBehaviour
     public string[] classStrings;
     public TextMeshProUGUI textBox;
 
+    [Header("Player Name Refrence")]
+    public TMP_InputField inputField;
+    public TextMeshProUGUI playerText;
 
     [HideInInspector]
-    public int bodySelected;
+    public static int bodySelected;
     [HideInInspector]
-    public int headSelected;
+    public static int headSelected;
     [HideInInspector]
-    public int legSelected;
+    public static int legSelected;
     [HideInInspector]
-    public int classSelected;
+    public static int classSelected;
+    [HideInInspector]
+    public static string playerName;
 
     private void Awake()
     {
         classSelected = 0;
     }
 
+    public void SubmitButton()
+    {
+        playerName = inputField.text;
+        playerText.text = playerName;
+    }
 
 
     public void GoForwardHead()
