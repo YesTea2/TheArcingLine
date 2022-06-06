@@ -1335,9 +1335,9 @@ MonoBehaviour:
   memberContainer2: {fileID: 838920273}
   memberContainer3: {fileID: 1645693928}
   partyMemberSprites:
-  - {fileID: 21300000, guid: f36a35a5f7e231d4aac18a333d98b2b4, type: 3}
+  - {fileID: 21300000, guid: bff52abd418a7964eb9aa124ea1b6e6b, type: 3}
   - {fileID: -9095717837082945937, guid: cf28f03c37d110e469bd68d4c470b4c9, type: 3}
-  - {fileID: -2413806693520163455, guid: fdb7ac79fbe7b9e42901c8370245069b, type: 3}
+  - {fileID: 21300000, guid: 8a11944592fdf104d903b9ad54071b66, type: 3}
   - {fileID: 21300000, guid: 0dfd63f0ae0017c4a924db1a19093a06, type: 3}
   - {fileID: 21300000, guid: 973b1d38a885af9459ff9da92d5d5130, type: 3}
 --- !u!4 &1613717190

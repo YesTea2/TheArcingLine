@@ -760,7 +760,7 @@ GameObject:
   - component: {fileID: 367321619}
   - component: {fileID: 367321618}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: BardImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1966,7 +1966,7 @@ GameObject:
   - component: {fileID: 1030266577}
   - component: {fileID: 1030266576}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: RougeImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2304,7 +2304,7 @@ GameObject:
   - component: {fileID: 1138748004}
   - component: {fileID: 1138748003}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: SwordsmanImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2327,7 +2327,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -1.0009995, y: 25.856266}
-  m_SizeDelta: {x: 23.70673, y: 57.20336}
+  m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1138748003
 MonoBehaviour:
@@ -2342,14 +2342,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.38431373, g: 0.45458388, b: 0.6117647, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8a11944592fdf104d903b9ad54071b66, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2877,7 +2877,7 @@ GameObject:
   - component: {fileID: 1421328759}
   - component: {fileID: 1421328758}
   m_Layer: 5
-  m_Name: Image (4)
+  m_Name: MageImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3335,7 +3335,7 @@ GameObject:
   - component: {fileID: 1627992876}
   - component: {fileID: 1627992875}
   m_Layer: 5
-  m_Name: Image
+  m_Name: HunterImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3380,7 +3380,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d2a31e5dec61d284597c9c4b4d8e3ad5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bff52abd418a7964eb9aa124ea1b6e6b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
