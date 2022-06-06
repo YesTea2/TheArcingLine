@@ -376,7 +376,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Give help to the dwarves with their mission of genocide '
+  m_text: place holder choice
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 73101e9e80ed28844ad3008281c1fc97, type: 2}
   m_sharedMaterial: {fileID: -2032380634540287173, guid: 73101e9e80ed28844ad3008281c1fc97, type: 2}
@@ -624,9 +624,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: the party encounters dwarves they seem friendly and want to ask a question
-    <br><br>"hail blah blah blah  we want you to to do this thing for very little
-    reward please do this and we will give you long short love
+  m_text: place holder text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 73101e9e80ed28844ad3008281c1fc97, type: 2}
   m_sharedMaterial: {fileID: -2032380634540287173, guid: 73101e9e80ed28844ad3008281c1fc97, type: 2}
@@ -1704,7 +1702,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Tell the Dwarves to shove off and head towards the tavern '
+  m_text: 'place holder choice '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 73101e9e80ed28844ad3008281c1fc97, type: 2}
   m_sharedMaterial: {fileID: -2032380634540287173, guid: 73101e9e80ed28844ad3008281c1fc97, type: 2}
