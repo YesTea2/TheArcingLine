@@ -8,7 +8,8 @@ using TMPro;
 
 public class CharacterSelectButtons : MonoBehaviour
 {
- 
+    [Header("How Many Of Each Body Part")]
+    public int bodyParts;
 
     [Header("Head Refrence")]
     public Sprite[] headImages;
@@ -58,8 +59,10 @@ public class CharacterSelectButtons : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         classSelected = 0;
+        bodyParts -= 1;
 
     }
+
 
     public void SubmitButton()
     {
@@ -80,12 +83,12 @@ public class CharacterSelectButtons : MonoBehaviour
 
     public void GoForwardHead()
     {
-        if(headSelected < 3)
+        if(headSelected < bodyParts)
         {
             headSelected += 1;
             headContainer.sprite = headImages[headSelected];
         }
-        else if(headSelected == 3)
+        else if(headSelected == bodyParts)
         {
             headSelected = 0;
             headContainer.sprite = headImages[headSelected];
@@ -102,19 +105,19 @@ public class CharacterSelectButtons : MonoBehaviour
         }
         else if(headSelected == 0)
         {
-            headSelected = 3;
+            headSelected = bodyParts;
             headContainer.sprite = headImages[headSelected];
         }
     }
 
     public void GoForwardBody()
     {
-        if (bodySelected < 3)
+        if (bodySelected < bodyParts)
         {
             bodySelected += 1;
             bodyContainer.sprite = bodyImages[bodySelected];
         }
-        else if (bodySelected == 3)
+        else if (bodySelected == bodyParts)
         {
             bodySelected = 0;
             bodyContainer.sprite = bodyImages[bodySelected];
@@ -130,19 +133,19 @@ public class CharacterSelectButtons : MonoBehaviour
         }
         else if (bodySelected == 0)
         {
-            bodySelected = 3;
+            bodySelected = bodyParts;
             bodyContainer.sprite = bodyImages[bodySelected];
         }
     }
 
     public void GoForwardLeg()
     {
-        if (legSelected < 3)
+        if (legSelected < bodyParts)
         {
             legSelected += 1;
             legContainer.sprite = legImages[legSelected];
         }
-        else if (legSelected == 3)
+        else if (legSelected == bodyParts)
         {
             legSelected = 0;
             legContainer.sprite = legImages[legSelected];
@@ -158,7 +161,7 @@ public class CharacterSelectButtons : MonoBehaviour
         }
         else if (legSelected == 0)
         {
-            legSelected = 3;
+            legSelected = bodyParts;
             legContainer.sprite = legImages[legSelected];
         }
     }

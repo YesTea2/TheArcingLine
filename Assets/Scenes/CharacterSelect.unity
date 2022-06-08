@@ -423,7 +423,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0075f9bffca582a4ca4765f3689dce54, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cefba7bd046032b42a3908d0a187f98f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2995,7 +2995,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dedff902d758c7c4e816d57702684a98, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8dc1e545a7680a54590be980469a1ddb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3517,23 +3517,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb4eb4737acd4aa46a1f95ba29722887, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bodyParts: 5
   headImages:
   - {fileID: 21300000, guid: 64ec48c84bd9f3a4a9892499ab0808b0, type: 3}
   - {fileID: 21300000, guid: e1b45c0cdc0b0f04d8d9d12f173e20aa, type: 3}
   - {fileID: 21300000, guid: 6b24e116bb90a854a84c2567f536cf0f, type: 3}
   - {fileID: 21300000, guid: bdf14da7e8334bd4398ac3f8c407d497, type: 3}
+  - {fileID: 21300000, guid: 1e842b99c688ee845afaf379b903c823, type: 3}
   headContainer: {fileID: 756260876}
   bodyImages:
   - {fileID: 21300000, guid: cefba7bd046032b42a3908d0a187f98f, type: 3}
   - {fileID: 21300000, guid: 0075f9bffca582a4ca4765f3689dce54, type: 3}
   - {fileID: 21300000, guid: 80e61eab6281f684ab37d40696393a1a, type: 3}
   - {fileID: 21300000, guid: 161254d046d95624f9be6796deff175b, type: 3}
+  - {fileID: 21300000, guid: 166437c50cdddb140b04752c9480f78f, type: 3}
   bodyContainer: {fileID: 154768613}
   legImages:
   - {fileID: 21300000, guid: 8dc1e545a7680a54590be980469a1ddb, type: 3}
   - {fileID: 21300000, guid: dedff902d758c7c4e816d57702684a98, type: 3}
   - {fileID: 21300000, guid: b4ababef7d3062041933f090f959e871, type: 3}
-  - {fileID: 21300000, guid: bea1fb9f3e49cc74aa925bd25c91dc38, type: 3}
+  - {fileID: 21300000, guid: f12099c6308a6f24db4148eb1c88f287, type: 3}
+  - {fileID: 21300000, guid: 015a241d38208b24fa6a0cf4d95e8643, type: 3}
   legContainer: {fileID: 1467159629}
   weaponImages:
   - {fileID: 21300000, guid: d1793598db750664fbf5615620c1a48d, type: 3}
