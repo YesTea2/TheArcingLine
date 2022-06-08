@@ -76,6 +76,8 @@ public class PartySelectButtons : MonoBehaviour
         notSelectedBard = true;
         notSelectedMage = true;
 
+        classTextContainer.text = "Choose Your Party " + CharacterSelectButtons.playerName.ToString() + "<br><br> <size=5><br>(Select 2 heroes to join party)<br><br> (Select your first member)";
+
     }
 
 
@@ -323,7 +325,7 @@ public class PartySelectButtons : MonoBehaviour
         }
         else if (adventureReady)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         }
       
     }

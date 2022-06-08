@@ -26,6 +26,7 @@ public class CharacterSelectButtons : MonoBehaviour
     [Header("Class Refrence")]
     public string[] classStrings;
     public TextMeshProUGUI textBox;
+    
 
     [Header("Player Name Refrence")]
     public TMP_InputField inputField;
@@ -42,15 +43,38 @@ public class CharacterSelectButtons : MonoBehaviour
     [HideInInspector]
     public static string playerName;
 
+
+    public static CharacterSelectButtons instance;
     private void Awake()
     {
+
+        if (instance == null)
+            instance = this;
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+        DontDestroyOnLoad(gameObject);
+
         classSelected = 0;
+
     }
 
     public void SubmitButton()
     {
-        playerName = inputField.text;
-        playerText.text = playerName;
+        if(inputField.text == "")
+        {
+            textBox.text = "The people need a name to call their hero";
+        }
+        else if(inputField.text != "")
+        {
+            playerName = inputField.text;
+            textBox.text = "Great " + playerName.ToString() + " now it is time for you to recruit a traveling party";
+            StartCoroutine(TimeForNewScene());
+        }
+        
+      
     }
 
 
@@ -90,7 +114,7 @@ public class CharacterSelectButtons : MonoBehaviour
             bodySelected += 1;
             bodyContainer.sprite = bodyImages[bodySelected];
         }
-        if (bodySelected == 3)
+        else if (bodySelected == 3)
         {
             bodySelected = 0;
             bodyContainer.sprite = bodyImages[bodySelected];
@@ -104,7 +128,7 @@ public class CharacterSelectButtons : MonoBehaviour
             bodySelected -= 1;
             bodyContainer.sprite = bodyImages[bodySelected];
         }
-        if (bodySelected == 0)
+        else if (bodySelected == 0)
         {
             bodySelected = 3;
             bodyContainer.sprite = bodyImages[bodySelected];
@@ -118,7 +142,7 @@ public class CharacterSelectButtons : MonoBehaviour
             legSelected += 1;
             legContainer.sprite = legImages[legSelected];
         }
-        if (headSelected == 3)
+        else if (legSelected == 3)
         {
             legSelected = 0;
             legContainer.sprite = legImages[legSelected];
@@ -132,7 +156,7 @@ public class CharacterSelectButtons : MonoBehaviour
             legSelected -= 1;
             legContainer.sprite = legImages[legSelected];
         }
-        if (legSelected == 0)
+        else if (legSelected == 0)
         {
             legSelected = 3;
             legContainer.sprite = legImages[legSelected];
@@ -141,15 +165,17 @@ public class CharacterSelectButtons : MonoBehaviour
 
     public void GoForwardClass()
     {
-        if(classSelected < 4)
+        if(classSelected < 3)
         {
             classSelected += 1;
             textBox.text = classStrings[classSelected];
+            weaponContainer.sprite = weaponImages[classSelected];
         }
-        else if(classSelected == 4)
+        else if(classSelected == 3)
         {
             classSelected = 0;
             textBox.text = classStrings[classSelected];
+            weaponContainer.sprite = weaponImages[classSelected];
         }
     }
 
@@ -158,12 +184,21 @@ public class CharacterSelectButtons : MonoBehaviour
         if(classSelected > 0)
         {
             classSelected -= 1;
+            weaponContainer.sprite = weaponImages[classSelected];
             textBox.text = classStrings[classSelected];
         }
         else if(classSelected == 0)
         {
-            classSelected = 4;
+            classSelected = 3;
             textBox.text = classStrings[classSelected];
+            weaponContainer.sprite = weaponImages[classSelected];
         }
     }
+
+    IEnumerator TimeForNewScene()
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene(1);
+    }
+  
 }
