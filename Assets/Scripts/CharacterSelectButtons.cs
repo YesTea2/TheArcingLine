@@ -23,6 +23,9 @@ public class CharacterSelectButtons : MonoBehaviour
     [Header("Weapon Refrence")]
     public Sprite[] weaponImages;
     public Image weaponContainer;
+    [Header("Cape Refrence")]
+    public Sprite[] capeImages;
+    public Image capeContainer;
 
     [Header("Class Refrence")]
     public string[] classStrings;
@@ -39,6 +42,8 @@ public class CharacterSelectButtons : MonoBehaviour
     public static int headSelected;
     [HideInInspector]
     public static int legSelected;
+    [HideInInspector]
+    public static int capeSelected;
     [HideInInspector]
     public static int classSelected;
     [HideInInspector]
@@ -163,6 +168,34 @@ public class CharacterSelectButtons : MonoBehaviour
         {
             legSelected = bodyParts;
             legContainer.sprite = legImages[legSelected];
+        }
+    }
+
+    public void GoForwardCape()
+    {
+        if (capeSelected < bodyParts + 1)
+        {
+            capeSelected += 1;
+            capeContainer.sprite = capeImages[capeSelected];
+        }
+        else if (capeSelected == bodyParts + 1)
+        {
+            capeSelected = 0;
+            capeContainer.sprite = capeImages[capeSelected];
+        }
+    }
+
+    public void GoBackwardCape()
+    {
+        if (capeSelected > 0)
+        {
+            capeSelected -= 1;
+            capeContainer.sprite = capeImages[capeSelected];
+        }
+        else if (capeSelected == 0)
+        {
+            capeSelected = bodyParts + 1;
+            capeContainer.sprite = capeImages[capeSelected];
         }
     }
 

@@ -19,12 +19,14 @@ public class StorySceneRefrences : MonoBehaviour
     public Sprite[] bodyImages;
     public Sprite[] legImages;
     public Sprite[] weaponImages;
+    public Sprite[] capeImages;
 
     [Header("Player Image Containers")]
     public Image headImage;
     public Image bodyImage;
     public Image legImage;
     public Image weaponImage;
+    public Image capeImage;
 
     private bool hasBeenAssignedFirstMember;
 
@@ -34,6 +36,8 @@ public class StorySceneRefrences : MonoBehaviour
         bodyImage.sprite = bodyImages[CharacterSelectButtons.bodySelected];
         legImage.sprite = legImages[CharacterSelectButtons.legSelected];
         weaponImage.sprite = weaponImages[CharacterSelectButtons.classSelected];
+        capeImage.sprite = capeImages[CharacterSelectButtons.capeSelected];
+        
         //checking for hunter in array from party selection
         if (PartySelectButtons.arrayClassNumbers[0] == 1 || PartySelectButtons.arrayClassNumbers[1] == 1)
         {
