@@ -4226,7 +4226,7 @@ MonoBehaviour:
   heroAttacking: {fileID: 1816893281}
   skillFlavorText:
   - 3x damage for 3 turns then stuns Hunter for 1 turn ( 6 turn cooldown )
-  - 
+  - blank
   - Stuns enemy for 1 turn ( 1 turn cooldown )
   - Stuns enemy for 1 turn ( 1 turn cooldown )
   - Hits all enemies for base attack ( 2 turn cooldown )

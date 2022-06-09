@@ -234,32 +234,32 @@ public class SkillSelect : MonoBehaviour
         if (isHunterAttacking && memberAttacking == 1)
         {
             heroAttacking.text = "Hunters turn to attack";
-            SetSkillTextOne(attackSkills[0], 1);
-            SetSkillTextTwo(attackSkills[1], 1);
+            SetSkillTextOne(attackSkills[0], 1 , 0);
+            SetSkillTextTwo(attackSkills[1], 1, 1);
         }
         else if (isRougeAttacking && memberAttacking == 2)
         {
             heroAttacking.text = "Rouges turn to attack";
-            SetSkillTextOne(attackSkills[2], 2);
-            SetSkillTextTwo(attackSkills[3], 2);
+            SetSkillTextOne(attackSkills[2], 2, 2);
+            SetSkillTextTwo(attackSkills[3], 2 , 3);
         }
         else if (isSwordsmanAttacking && memberAttacking == 3)
         {
             heroAttacking.text = "Swordsmans turn to attack";
-            SetSkillTextOne(attackSkills[4], 3);
-            SetSkillTextTwo(attackSkills[5], 3);
+            SetSkillTextOne(attackSkills[4], 3, 4);
+            SetSkillTextTwo(attackSkills[5], 3, 5);
         }
         else if (isBardAttacking && memberAttacking == 4)
         {
             heroAttacking.text = "Bards turn to attack";
-            SetSkillTextOne(attackSkills[6], 4);
-            SetSkillTextTwo(attackSkills[7], 4);
+            SetSkillTextOne(attackSkills[6], 4, 6);
+            SetSkillTextTwo(attackSkills[7], 4, 7);
         }
         else if (isMageAttacking && memberAttacking == 5)
         {
             heroAttacking.text = "Mages turn to attack";
-            SetSkillTextOne(attackSkills[8], 5);
-            SetSkillTextTwo(attackSkills[9], 5);
+            SetSkillTextOne(attackSkills[8], 5, 8);
+            SetSkillTextTwo(attackSkills[9], 5, 9);
         }
 
     }
@@ -293,19 +293,19 @@ public class SkillSelect : MonoBehaviour
 
     }
 
-    void SetSkillTextOne(string textToDisplay, int skillUsed)
+    void SetSkillTextOne(string textToDisplay, int skillUsed,  int numberForArray)
     {
         firstSkillBeingUsed = skillUsed;
         skillTextOne.text = textToDisplay;
-        firstCombatSkillSelectedText = skillFlavorText[skillUsed - 1];
+        firstCombatSkillSelectedText = skillFlavorText[numberForArray];
         Debug.Log(textToDisplay + " has been clicked!");
     }
 
-    void SetSkillTextTwo(string textToDisplay, int skillUsed)
+    void SetSkillTextTwo(string textToDisplay, int skillUsed, int numberForArray)
     {
         secondSkillBeingUsed = skillUsed;
         skillTextTwo.text = textToDisplay;
-        secondCombatSkillSelectedText = skillFlavorText[skillUsed * 2 - 1];
+        secondCombatSkillSelectedText = skillFlavorText[numberForArray];
         Debug.Log(textToDisplay + " has been clicked!");
     }
 

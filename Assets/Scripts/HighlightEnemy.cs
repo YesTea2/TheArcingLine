@@ -47,6 +47,7 @@ public class HighlightEnemy : Selectable, IPointerDownHandler, IPointerEnterHand
     public void OnPointerEnter(PointerEventData pointerEventData)
 #pragma warning restore CS0114 // Member hides inherited member; missing override keyword
     {
+       
         if (skillNumber == 1)
         {
             sSelect.textResponseArea.text =  sSelect.firstCombatSkillSelectedText;
