@@ -574,6 +574,7 @@ GameObject:
   - component: {fileID: 89367928}
   - component: {fileID: 89367927}
   - component: {fileID: 89367929}
+  - component: {fileID: 89367930}
   m_Layer: 5
   m_Name: Attack3Holder
   m_TagString: Untagged
@@ -689,6 +690,32 @@ MonoBehaviour:
   sSelect: {fileID: 1282912577}
   cScript: {fileID: 1282912575}
   skillsCounter: 0
+--- !u!61 &89367930
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89367925}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.00000071525574}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 153.12015, y: 11.175261}
+  m_EdgeRadius: 0
 --- !u!1 &105730578
 GameObject:
   m_ObjectHideFlags: 0
@@ -2372,6 +2399,7 @@ GameObject:
   - component: {fileID: 684465024}
   - component: {fileID: 684465023}
   - component: {fileID: 684465025}
+  - component: {fileID: 684465026}
   m_Layer: 5
   m_Name: Attack1Holder
   m_TagString: Untagged
@@ -2487,6 +2515,32 @@ MonoBehaviour:
   sSelect: {fileID: 1282912577}
   cScript: {fileID: 1282912575}
   skillsCounter: 0
+--- !u!61 &684465026
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684465021}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.3455429, y: 0.40950966}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 155.011, y: 11.319616}
+  m_EdgeRadius: 0
 --- !u!1 &695075896
 GameObject:
   m_ObjectHideFlags: 0
@@ -4079,6 +4133,7 @@ MonoBehaviour:
   skillNumberInUse: 0
   secondSkillNumberInUse: 0
   enemyNumberSelected: 0
+  isUsingBasicAttack: 0
 --- !u!4 &1282912576
 Transform:
   m_ObjectHideFlags: 0
@@ -4169,8 +4224,22 @@ MonoBehaviour:
   skillTextTwo: {fileID: 1179693141}
   textResponseArea: {fileID: 1777832142}
   heroAttacking: {fileID: 1816893281}
+  skillFlavorText:
+  - 3x damage for 3 turns then stuns Hunter for 1 turn ( 6 turn cooldown )
+  - 
+  - Stuns enemy for 1 turn ( 1 turn cooldown )
+  - Stuns enemy for 1 turn ( 1 turn cooldown )
+  - Hits all enemies for base attack ( 2 turn cooldown )
+  - Strike 1 enemy for 3x base damage ( 2 turn cooldown )
+  - Stuns enemy for 2 turns ( 3 turn cool down)
+  - Grants all party members 20 temporary hitpoints that last 3 rounds (  6 turn
+    cooldown)
+  - Charges for one turn then hits for 4x damage ( 4 turn cooldown )
+  - Ignites all enemies for 2x base damage ( 6 turn cooldown )
   firstSkillBeingUsed: 0
   secondSkillBeingUsed: 0
+  firstCombatSkillSelectedText: 
+  secondCombatSkillSelectedText: 
 --- !u!1 &1299689732
 GameObject:
   m_ObjectHideFlags: 0
@@ -6332,6 +6401,7 @@ GameObject:
   - component: {fileID: 2141854923}
   - component: {fileID: 2141854922}
   - component: {fileID: 2141854924}
+  - component: {fileID: 2141854925}
   m_Layer: 5
   m_Name: Attack2Holder
   m_TagString: Untagged
@@ -6447,6 +6517,32 @@ MonoBehaviour:
   sSelect: {fileID: 1282912577}
   cScript: {fileID: 1282912575}
   skillsCounter: 0
+--- !u!61 &2141854925
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141854920}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.16618347, y: 0.17439485}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 153.80533, y: 11.524052}
+  m_EdgeRadius: 0
 --- !u!1 &2142806966
 GameObject:
   m_ObjectHideFlags: 0

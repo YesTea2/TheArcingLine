@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 //Use the Selectable class as a base class to access the IsHighlighted method
-public class HighlightEnemy : Selectable, IPointerDownHandler
+public class HighlightEnemy : Selectable, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public int enemyNumber;
     public int skillNumber;
@@ -38,10 +38,36 @@ public class HighlightEnemy : Selectable, IPointerDownHandler
 
     private bool IsHighlighted(BaseEventData m_BaseEvent)
     {
+        
+       
         throw new NotImplementedException();
     }
 
-    
+#pragma warning disable CS0114 // Member hides inherited member; missing override keyword
+    public void OnPointerEnter(PointerEventData pointerEventData)
+#pragma warning restore CS0114 // Member hides inherited member; missing override keyword
+    {
+        if (skillNumber == 1)
+        {
+            sSelect.textResponseArea.text =  sSelect.firstCombatSkillSelectedText;
+        }
+        if (skillNumber == 2)
+        {
+            sSelect.textResponseArea.text = sSelect.secondCombatSkillSelectedText;
+        }
+        if (skillNumber == 3)
+        {
+            sSelect.textResponseArea.text = "Use weapon?";
+        }
+    }
+
+#pragma warning disable CS0114 // Member hides inherited member; missing override keyword
+    public void OnPointerExit(PointerEventData pointerEventData)
+#pragma warning restore CS0114 // Member hides inherited member; missing override keyword
+    {
+        sSelect.textResponseArea.text = "";
+    }
+
 #pragma warning disable CS0114 // Member hides inherited member; missing override keyword
     public void OnPointerDown(PointerEventData eventData)
 #pragma warning restore CS0114 // Member hides inherited member; missing override keyword

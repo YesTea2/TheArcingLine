@@ -37,10 +37,18 @@ public class SkillSelect : MonoBehaviour
     public TextMeshProUGUI textResponseArea;
     public TextMeshProUGUI heroAttacking;
 
+    [Header("Skill Flavor Text")]
+    public string[] skillFlavorText;
+
     [HideInInspector]
     public int firstSkillBeingUsed;
     [HideInInspector]
     public int secondSkillBeingUsed;
+    [HideInInspector]
+    public string firstCombatSkillSelectedText;
+    [HideInInspector]
+    public string secondCombatSkillSelectedText;
+    
 
     private bool hasBeenAssignedFirstMember;
 
@@ -289,6 +297,7 @@ public class SkillSelect : MonoBehaviour
     {
         firstSkillBeingUsed = skillUsed;
         skillTextOne.text = textToDisplay;
+        firstCombatSkillSelectedText = skillFlavorText[skillUsed - 1];
         Debug.Log(textToDisplay + " has been clicked!");
     }
 
@@ -296,6 +305,7 @@ public class SkillSelect : MonoBehaviour
     {
         secondSkillBeingUsed = skillUsed;
         skillTextTwo.text = textToDisplay;
+        secondCombatSkillSelectedText = skillFlavorText[skillUsed * 2 - 1];
         Debug.Log(textToDisplay + " has been clicked!");
     }
 
