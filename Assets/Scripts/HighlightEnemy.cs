@@ -336,31 +336,34 @@ public class HighlightEnemy : Selectable, IPointerDownHandler
         {
             if(sSelect.firstSkillBeingUsed == 1)
             {
-               
+
+                sSelect.textResponseArea.text = "Select the enemy you want to strike for 3x damage";
                 cScript.skillNumberInUse = 1;
             }
           
             if (sSelect.firstSkillBeingUsed == 2)
             {
-              
+                sSelect.textResponseArea.text = "Choose the enemy to stun";
                 cScript.skillNumberInUse = 2;
             }
           
             if (sSelect.firstSkillBeingUsed == 3)
             {
+               // no combat text hits all enemies for base attack
                 cScript.skillNumberInUse = 3;
                
             }
           
             if (sSelect.firstSkillBeingUsed == 4)
             {
+                sSelect.textResponseArea.text = "Choose the enemy to stun";
                 cScript.skillNumberInUse = 4;
                 
             }
            
             if (sSelect.firstSkillBeingUsed == 5)
             {
-              
+                sSelect.textResponseArea.text = "Choose the enemy to strike with your fireball and start charging your cast";
                 cScript.skillNumberInUse = 5;
                
             }
@@ -379,7 +382,7 @@ public class HighlightEnemy : Selectable, IPointerDownHandler
 
             if (sSelect.secondSkillBeingUsed == 2)
             {
-
+                sSelect.textResponseArea.text = "Choose the enemy to stun";
                 cScript.secondSkillNumberInUse = 2;
             }
 
@@ -393,12 +396,14 @@ public class HighlightEnemy : Selectable, IPointerDownHandler
             if (sSelect.secondSkillBeingUsed == 4)
             {
                 cScript.secondSkillNumberInUse = 4;
-               
+                // no combat text gives health to all members
             }
 
             if (sSelect.secondSkillBeingUsed == 5)
             {
+                // no combat text hits all enemies for 5
                 cScript.secondSkillNumberInUse = 5;
+
                
             }
             cScript.skillNumberInUse = 0;

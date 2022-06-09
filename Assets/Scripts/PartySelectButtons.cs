@@ -38,6 +38,12 @@ public class PartySelectButtons : MonoBehaviour
     private bool bardSelected;
     private bool adventureReady;
 
+    private bool canNotSelectHunter;
+    private bool canNotSelectRouge;
+    private bool canNotSelectSwordsman;
+    private bool canNotSelectBard;
+    private bool canNotSelectMage;
+
     public static bool notSelectedHunter;
     public static bool notSelectedRouge;
     public static bool notSelectedSwordsman;
@@ -216,18 +222,9 @@ public class PartySelectButtons : MonoBehaviour
         {
             if (amountSelected < 2)
             {
-                amountSelected += 1;
-                if (amountSelected == 2)
-                {
-                    StartCoroutine(PartySelected());
-
-                    hunterButton.enabled = false;
-                    rougeButton.enabled = false;
-                    swordsmanButton.enabled = false;
-                    bardButton.enabled = false;
-                    mageButton.enabled = false;
-                }
-                if (hunterSelected)
+              
+               
+                if (hunterSelected && !canNotSelectHunter)
                 {
                     classTextContainer.text = "<size=4>Hunter Has Joined Party";
                     hunterButton.enabled = false;
@@ -242,11 +239,12 @@ public class PartySelectButtons : MonoBehaviour
                     {
                         arrayClassNumbers[1] = 1;
                     }
-
+                    amountSelected += 1;
+                    canNotSelectHunter = true;
                     notSelectedHunter = false;
                 }
 
-                if (rougeSelected)
+                if (rougeSelected && !canNotSelectRouge)
                 {
                     classTextContainer.text = "<size=4>Rouge Has Joined Party";
                     rougeButton.enabled = false;
@@ -261,11 +259,12 @@ public class PartySelectButtons : MonoBehaviour
                     {
                         arrayClassNumbers[1] = 2;
                     }
-
+                    amountSelected += 1;
+                    canNotSelectRouge = true;
                     notSelectedRouge = false;
                 }
 
-                if (swordsmanSelected)
+                if (swordsmanSelected && !canNotSelectSwordsman)
                 {
                     classTextContainer.text = "<size=4>Swordsman Has Joined Party";
                     swordsmanButton.enabled = false;
@@ -280,11 +279,12 @@ public class PartySelectButtons : MonoBehaviour
                     {
                         arrayClassNumbers[1] = 3;
                     }
-
+                    amountSelected += 1;
+                    canNotSelectSwordsman = true;
                     notSelectedSwordsman = false;
                 }
 
-                if (bardSelected)
+                if (bardSelected && !canNotSelectBard)
                 {
                     classTextContainer.text = "<size=4>Bard Has Joined Party";
                     bardButton.enabled = false;
@@ -299,11 +299,12 @@ public class PartySelectButtons : MonoBehaviour
                     {
                         arrayClassNumbers[1] = 4;
                     }
-
+                    amountSelected += 1;
+                    canNotSelectBard = true;
                     notSelectedBard = false;
                 }
 
-                if (mageSelected)
+                if (mageSelected && !canNotSelectMage)
                 {
                     classTextContainer.text = "<size=4>Mage Has Joined Party";
                     mageButton.enabled = false;
@@ -319,8 +320,23 @@ public class PartySelectButtons : MonoBehaviour
                         arrayClassNumbers[1] = 5;
                     }
 
+                    amountSelected += 1;
+                    canNotSelectMage = true;
                     notSelectedMage = false;
                 }
+
+
+            }
+
+            if (amountSelected == 2)
+            {
+                StartCoroutine(PartySelected());
+
+                hunterButton.enabled = false;
+                rougeButton.enabled = false;
+                swordsmanButton.enabled = false;
+                bardButton.enabled = false;
+                mageButton.enabled = false;
             }
         }
         else if (adventureReady)
