@@ -36,6 +36,9 @@ public class CharacterSelectButtons : MonoBehaviour
     public TMP_InputField inputField;
     public TextMeshProUGUI playerText;
 
+    [Header("Random Name Array")]
+    public string[] randomNames;
+
     [HideInInspector]
     public static int bodySelected;
     [HideInInspector]
@@ -83,6 +86,22 @@ public class CharacterSelectButtons : MonoBehaviour
         }
         
       
+    }
+
+    public void RandomButton()
+    {
+        headContainer.sprite = headImages[Random.Range(0,5)];
+        bodyContainer.sprite = bodyImages[Random.Range(0, 5)];
+        legContainer.sprite = legImages[Random.Range(0, 5)];
+        capeContainer.sprite = capeImages[Random.Range(0, 6)];
+        //weaponContainer.sprite = weaponImages[Random.Range(0, 5)];
+        playerName = randomNames[Random.Range(0,17)];
+        inputField.text = playerName;
+
+        classSelected = Random.Range(0,3);
+        textBox.text = classStrings[classSelected];
+        weaponContainer.sprite = weaponImages[classSelected];
+        
     }
 
 
