@@ -21,6 +21,7 @@ public class HighlightEnemy : Selectable, IPointerDownHandler, IPointerEnterHand
     public int skillsCounter;
 
     private bool baseAttack;
+    private Color  storedColor;
 
     //Use this to check what Events are happening
     BaseEventData m_BaseEvent;
@@ -29,6 +30,7 @@ public class HighlightEnemy : Selectable, IPointerDownHandler, IPointerEnterHand
     {
         sSelect = FindObjectOfType<SkillSelect>();
         cScript = FindObjectOfType<CombatScript>();
+        storedColor = this.gameObject.GetComponent<Image>().color;
     }
     void Update()
     {
@@ -50,16 +52,41 @@ public class HighlightEnemy : Selectable, IPointerDownHandler, IPointerEnterHand
        
         if (skillNumber == 1)
         {
+            this.gameObject.GetComponent<Image>().color = new Color32(156,156, 156, 255);
             sSelect.textResponseArea.text =  sSelect.firstCombatSkillSelectedText;
         }
         if (skillNumber == 2)
         {
+            this.gameObject.GetComponent<Image>().color = new Color32(156, 156, 156, 255);
             sSelect.textResponseArea.text = sSelect.secondCombatSkillSelectedText;
         }
         if (skillNumber == 3)
         {
+            this.gameObject.GetComponent<Image>().color = new Color32(156, 156, 156, 255);
             sSelect.textResponseArea.text = "Use weapon?";
         }
+        if(enemyNumber == 1)
+        {
+            this.gameObject.GetComponent<Image>().color = new Color32(125, 45, 45, 255);
+            sSelect.textResponseArea.text = "Enemy 1";
+        }
+        if(enemyNumber == 2)
+        {
+            this.gameObject.GetComponent<Image>().color = new Color32(125, 45, 45, 255);
+            sSelect.textResponseArea.text = "Enemy 2";
+        }
+        if(enemyNumber == 3)
+        {
+            this.gameObject.GetComponent<Image>().color = new Color32(125, 45, 45, 255);
+            sSelect.textResponseArea.text = "Enemy 3";
+        }
+        if (enemyNumber == 4)
+        {
+            this.gameObject.GetComponent<Image>().color = new Color32(125, 45, 45, 255);
+            sSelect.textResponseArea.text = "Enemy 4";
+        }
+
+
     }
 
 #pragma warning disable CS0114 // Member hides inherited member; missing override keyword
@@ -67,6 +94,7 @@ public class HighlightEnemy : Selectable, IPointerDownHandler, IPointerEnterHand
 #pragma warning restore CS0114 // Member hides inherited member; missing override keyword
     {
         sSelect.textResponseArea.text = "";
+        this.gameObject.GetComponent<Image>().color = storedColor;
     }
 
 #pragma warning disable CS0114 // Member hides inherited member; missing override keyword
@@ -361,6 +389,7 @@ public class HighlightEnemy : Selectable, IPointerDownHandler, IPointerEnterHand
 
         if(skillNumber == 1)
         {
+             this.gameObject.GetComponent<Image>().color = new Color32(91, 91, 91, 255);
             if(sSelect.firstSkillBeingUsed == 1)
             {
 
@@ -401,6 +430,7 @@ public class HighlightEnemy : Selectable, IPointerDownHandler, IPointerEnterHand
 
         if (skillNumber == 2)
         {
+            this.gameObject.GetComponent<Image>().color = new Color32(91, 91, 91, 255);
             if (sSelect.secondSkillBeingUsed == 1)
             {
                 cScript.secondSkillNumberInUse = 1;
@@ -439,6 +469,7 @@ public class HighlightEnemy : Selectable, IPointerDownHandler, IPointerEnterHand
 
         if(skillNumber == 3)
         {
+            this.gameObject.GetComponent<Image>().color = new Color32(91, 91, 91, 255);
             sSelect.textResponseArea.text = "Select the enemy you wish to attack with your weapon";
             cScript.isUsingBasicAttack = true;
             cScript.skillNumberInUse = 0;
