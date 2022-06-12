@@ -41,6 +41,10 @@ public class SkillSelect : MonoBehaviour
     public string[] skillFlavorText;
 
     [HideInInspector]
+    public string partyMemberClassOne;
+    public string partyMemberClasstwo;
+
+    [HideInInspector]
     public int firstSkillBeingUsed;
     [HideInInspector]
     public int secondSkillBeingUsed;
@@ -48,19 +52,23 @@ public class SkillSelect : MonoBehaviour
     public string firstCombatSkillSelectedText;
     [HideInInspector]
     public string secondCombatSkillSelectedText;
+    [HideInInspector]
+    CombatScript cS;
     
 
     private bool hasBeenAssignedFirstMember;
+    public bool enemyAttacking;
 
-    private int memberAttacking;
-    private int secondMemberAttacking;
+    [HideInInspector]
+    public int memberAttacking;
+    public int secondMemberAttacking;
 
-
-    private bool isHunterAttacking;
-    private bool isRougeAttacking;
-    private bool isSwordsmanAttacking;
-    private bool isBardAttacking;
-    private bool isMageAttacking;
+    [HideInInspector]
+    public bool isHunterAttacking;
+    public bool isRougeAttacking;
+    public bool isSwordsmanAttacking;
+    public bool isBardAttacking;
+    public bool isMageAttacking;
 
     private bool isHunterAttackingSecond;
     private bool isRougeAttackingSecond;
@@ -78,10 +86,27 @@ public class SkillSelect : MonoBehaviour
     private bool piperInUse;
     private bool sweetSongInUse;
 
-    private int curMember;
+    [HideInInspector]
+    public bool isEnemyFourAlive;
+    public bool isEnemyThreeAlive;
+    public bool isEnemyTwoAlive;
+    public bool isEnemyOneAlive;
+    public bool partyAttacking;
+    public bool finalMemberHasGone;
 
+    public int curMember;
+    public int curEnemy;
+
+    [HideInInspector]
+    EnemyHealth[] eH;
+
+    private void Awake()
+    {
+        cS = FindObjectOfType<CombatScript>();
+    }
     private void Start()
     {
+        eH = FindObjectsOfType<EnemyHealth>();
         headImage.sprite = headImages[CharacterSelectButtons.headSelected];
         bodyImage.sprite = bodyImages[CharacterSelectButtons.bodySelected];
         legImage.sprite = legImages[CharacterSelectButtons.legSelected];
@@ -112,7 +137,12 @@ public class SkillSelect : MonoBehaviour
                 secondMemberAttacking = 1;
             }
 
-        
+        isEnemyOneAlive = true;
+        isEnemyTwoAlive = true;
+        isEnemyThreeAlive = true;
+        isEnemyFourAlive = true;
+        partyAttacking = true;
+        finalMemberHasGone = false;
 
         //checking for rouge in array from party selection
         if (PartySelectButtons.arrayClassNumbers[0] == 2)
@@ -218,9 +248,9 @@ public class SkillSelect : MonoBehaviour
 
             }
 
-        
-    
-    StartCoroutine(CombatTime());
+
+
+        GoToNextCombatPhase();
 
     }
     private void Update()
@@ -228,69 +258,128 @@ public class SkillSelect : MonoBehaviour
        
     }
 
+    public void GoToNextCombatPhase()
+    {
+        StartCoroutine(CombatTime());
+    }
     void FirstMemberPhase()
     {
 
         if (isHunterAttacking && memberAttacking == 1)
         {
+            partyMemberClassOne = "Hunter";
             heroAttacking.text = "Hunters turn to attack";
             SetSkillTextOne(attackSkills[0], 1 , 0);
             SetSkillTextTwo(attackSkills[1], 1, 1);
+           
         }
         else if (isRougeAttacking && memberAttacking == 2)
         {
+            partyMemberClassOne = "Rouge";
             heroAttacking.text = "Rouges turn to attack";
             SetSkillTextOne(attackSkills[2], 2, 2);
             SetSkillTextTwo(attackSkills[3], 2 , 3);
+            
         }
         else if (isSwordsmanAttacking && memberAttacking == 3)
         {
+            partyMemberClassOne = "Swordsman";
             heroAttacking.text = "Swordsmans turn to attack";
             SetSkillTextOne(attackSkills[4], 3, 4);
             SetSkillTextTwo(attackSkills[5], 3, 5);
+            
         }
         else if (isBardAttacking && memberAttacking == 4)
         {
+            partyMemberClassOne = "Bard";
             heroAttacking.text = "Bards turn to attack";
             SetSkillTextOne(attackSkills[6], 4, 6);
             SetSkillTextTwo(attackSkills[7], 4, 7);
+           
         }
         else if (isMageAttacking && memberAttacking == 5)
         {
+            partyMemberClassOne = "Mage";
             heroAttacking.text = "Mages turn to attack";
             SetSkillTextOne(attackSkills[8], 5, 8);
             SetSkillTextTwo(attackSkills[9], 5, 9);
+            
         }
 
     }
 
     void SecondMemberPhase()
     {
-        if (isHunterAttackingSecond)
+        if ( secondMemberAttacking == 1)
         {
-
+            partyMemberClasstwo = "Hunter";
+            heroAttacking.text = "Hunters turn to attack";
+            SetSkillTextOne(attackSkills[0], 1, 0);
+            SetSkillTextTwo(attackSkills[1], 1, 1);
+            
         }
-        if (isRougeAttackingSecond)
+        if (secondMemberAttacking == 2)
         {
-
+            partyMemberClasstwo = "Rouge";
+            heroAttacking.text = "Rouges turn to attack";
+            SetSkillTextOne(attackSkills[2], 2, 2);
+            SetSkillTextTwo(attackSkills[3], 2, 3);
+            
         }
-        if (isSwordsmanAttackingSecond)
+        if ( secondMemberAttacking == 3)
         {
-
+            partyMemberClasstwo = "Swordsman";
+            heroAttacking.text = "Swordsmans turn to attack";
+            SetSkillTextOne(attackSkills[4], 3, 4);
+            SetSkillTextTwo(attackSkills[5], 3, 5);
+           
         }
-        if (isBardAttackingSecond)
+        if (secondMemberAttacking == 4)
         {
-
+            partyMemberClasstwo = "Bard";
+            heroAttacking.text = "Bards turn to attack";
+            SetSkillTextOne(attackSkills[6], 4, 6);
+            SetSkillTextTwo(attackSkills[7], 4, 7);
+           
         }
-        if (isMageAttackingSecond)
+        if (secondMemberAttacking == 5)
         {
-
+            partyMemberClasstwo = "Mage";
+            heroAttacking.text = "Mages turn to attack";
+            SetSkillTextOne(attackSkills[8], 5, 8);
+            SetSkillTextTwo(attackSkills[9], 5, 9);
+            
         }
     }
 
     void ThirdMemberPhase()
     {
+        heroAttacking.text = CharacterSelectButtons.playerName.ToString() + " turn to attack";
+        if (CharacterSelectButtons.classSelected == 0)
+        {
+            SetSkillTextOne(attackSkills[4], 3, 4);
+            SetSkillTextTwo(attackSkills[5], 3, 5);
+        }
+        if(CharacterSelectButtons.classSelected == 1)
+        {
+            SetSkillTextOne(attackSkills[8], 5, 8);
+            SetSkillTextTwo(attackSkills[9], 5, 9);
+        }
+        if(CharacterSelectButtons.classSelected == 2)
+        {
+            SetSkillTextOne(attackSkills[6], 4, 6);
+            SetSkillTextTwo(attackSkills[7], 4, 7);
+        }
+        if(CharacterSelectButtons.classSelected == 3)
+        {
+            SetSkillTextOne(attackSkills[0], 1, 0);
+            SetSkillTextTwo(attackSkills[1], 1, 1);
+        }
+        partyAttacking = false;
+        enemyAttacking = true;
+       
 
+       
     }
 
     void SetSkillTextOne(string textToDisplay, int skillUsed,  int numberForArray)
@@ -309,31 +398,139 @@ public class SkillSelect : MonoBehaviour
         Debug.Log(textToDisplay + " has been clicked!");
     }
 
- 
+    void FirstEnemyPhase()
+    {
+        cS.EnemyAttacking(Random.Range(1, 5), 1);
+    }
+
+    void SecondEnemyPhase()
+    {
+        cS.EnemyAttacking(Random.Range(1, 5), 2);
+    }
+
+    void ThirdEnemyPhase()
+    {
+        cS.EnemyAttacking(Random.Range(1, 5), 3);
+    }
+
+    void FourthEnemyPhase()
+    {
+        cS.EnemyAttacking(Random.Range(1, 5), 4);
+        enemyAttacking = false;
+        partyAttacking = true;
+        
+       
+    }
+
+
     IEnumerator CombatTime()
     {
-        if(curMember == 3)
+        if (partyAttacking && !enemyAttacking)
         {
-            curMember = 0;
-        }
-        yield return new WaitForSeconds(.1f);
-        curMember += 1;
-        yield return new WaitForSeconds(.1f);
+            finalMemberHasGone = false;
+            if (curMember == 3)
+            {
+                curMember = 0;
+            }
+            yield return new WaitForSeconds(.1f);
+            curMember += 1;
+            yield return new WaitForSeconds(.1f);
 
-        if(curMember == 1)
-        {
-            FirstMemberPhase();
-        }
+            if (curMember == 1)
+            {
+                FirstMemberPhase();
+                yield break;
+            }
 
-        if(curMember == 2)
-        {
-            SecondMemberPhase();
-        }
+            else if (curMember == 2)
+            {
+                SecondMemberPhase();
+                yield break;
+            }
 
-        if(curMember == 3)
-        {
-            ThirdMemberPhase();
+            else if (curMember == 3)
+            {
+                ThirdMemberPhase();
+                yield break;
+            }
+            
         }
+        if (enemyAttacking && !partyAttacking)
+        {
+            finalMemberHasGone = true;
+            if (curEnemy >= 4)
+            {
+                curEnemy = 0;
+            }
+            yield return new WaitForSeconds(.1f);
+            curEnemy += 1;
+            yield return new WaitForSeconds(.1f);
+
+            if(curEnemy == 1 && isEnemyOneAlive)
+            {
+                textResponseArea.text = "Enemy 1 is attacking";
+                FirstEnemyPhase();
+                yield break;
+            }
+            else if (curEnemy == 2 && isEnemyTwoAlive)
+            {
+                textResponseArea.text = "Enemy 2 is attacking";
+                SecondEnemyPhase();
+                yield break;
+
+            }
+
+            else if (curEnemy == 3 && isEnemyThreeAlive)
+            {
+                textResponseArea.text = "Enemy 3 is attacking";
+                ThirdEnemyPhase();
+
+            }
+            else if (curEnemy == 4 && isEnemyFourAlive)
+            {
+                textResponseArea.text = "Enemy 4 is attacking";
+                curEnemy += 1;
+                FourthEnemyPhase();
+                yield break;
+
+            }
+
+            else if(curEnemy == 1 && !isEnemyOneAlive)
+            {
+               
+                ResetCombatCheck();
+                yield break;
+            }
+           
+            else if(curEnemy == 2 && !isEnemyTwoAlive)
+            {
+               
+                ResetCombatCheck();
+                yield break;
+            }
+       
+            else if (curEnemy == 3 && !isEnemyThreeAlive)
+            {
+                
+                ResetCombatCheck();
+                yield break;
+            }
+           
+            else if(curEnemy == 4 && !isEnemyFourAlive)
+            {
+                curEnemy = 6;
+                FourthEnemyPhase();
+               
+                yield break;
+
+            }
+        }
+    }
+
+   void ResetCombatCheck()
+    {
+        
+        StartCoroutine(CombatTime());
     }
 
 

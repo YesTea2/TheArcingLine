@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
+using System;
 
 public class CombatScript : MonoBehaviour
 {
     public int baseAttack;
     public GameObject[] enemyContainer;
+    int numToRemove;
+    public GameObject[] heroContainer;
     public int turnsToWait;
     public int bigAttackDamage;
     public int turn;
@@ -25,6 +29,9 @@ public class CombatScript : MonoBehaviour
     [HideInInspector]
     public SkillSelect sSelect;
 
+    [HideInInspector]
+    public HeroHealth hH;
+
     public int skillNumberInUse;
     public int secondSkillNumberInUse;
 
@@ -38,7 +45,11 @@ public class CombatScript : MonoBehaviour
     {
         hE = FindObjectsOfType<HighlightEnemy>();
         sSelect = FindObjectOfType<SkillSelect>();
+        hH = FindObjectOfType<HeroHealth>();
+        
     }
+
+
 
     public void BasicAttack()
     {
@@ -47,6 +58,7 @@ public class CombatScript : MonoBehaviour
             enemyContainer[0].GetComponent<EnemyHealth>().RemoveHealth(baseAttack);
             sSelect.textResponseArea.text = "Enemy 1 hit with a basic attack for " + baseAttack;
             isUsingBasicAttack = false;
+            StartCoroutine(WaitForNextEnemy());
 
         }
         if(enemyNumberSelected == 2)
@@ -54,18 +66,22 @@ public class CombatScript : MonoBehaviour
             enemyContainer[1].GetComponent<EnemyHealth>().RemoveHealth(baseAttack);
             sSelect.textResponseArea.text = "Enemy 2 hit with a basic attack for " + baseAttack;
             isUsingBasicAttack = false;
+            StartCoroutine(WaitForNextEnemy());
         }
         if(enemyNumberSelected == 3)
         {
             enemyContainer[2].GetComponent<EnemyHealth>().RemoveHealth(baseAttack);
             sSelect.textResponseArea.text = "Enemy 3 hit with a basic attack for " + baseAttack;
             isUsingBasicAttack = false;
+            StartCoroutine(WaitForNextEnemy());
         }
         if(enemyNumberSelected == 4)
         {
+           
             enemyContainer[3].GetComponent<EnemyHealth>().RemoveHealth(baseAttack);
             sSelect.textResponseArea.text = "Enemy 4 hit with a basic attack for " + baseAttack;
             isUsingBasicAttack = false;
+            StartCoroutine(WaitForNextEnemy());
         }
     }
     public void OnTheHunt()
@@ -82,9 +98,11 @@ public class CombatScript : MonoBehaviour
     }
     public void Cleave()
     {
+        HitAllEnemies(baseAttack);
         Debug.Log("Cleave Being Used");
         skillNumberInUse = 0;
         secondSkillNumberInUse = 0;
+        
     }
 
     public void SwordDance()
@@ -93,23 +111,27 @@ public class CombatScript : MonoBehaviour
         {
             enemyContainer[0].GetComponent<EnemyHealth>().RemoveHealth(baseAttack * 3);
             sSelect.textResponseArea.text = "Enemy 1 hit with Sword Dance for " + baseAttack * 3 + " CRITICAL HIT!!";
+            StartCoroutine(WaitForNextEnemy());
         }
         if(enemyNumberSelected == 2)
         {
             enemyContainer[1].GetComponent<EnemyHealth>().RemoveHealth(baseAttack * 3);
             sSelect.textResponseArea.text = "Enemy 2 hit with Sword Dance for " + baseAttack * 3 + " CRITICAL HIT!!";
+            StartCoroutine(WaitForNextEnemy());
         }
 
         if(enemyNumberSelected == 3)
         {
             enemyContainer[2].GetComponent<EnemyHealth>().RemoveHealth(baseAttack * 3);
             sSelect.textResponseArea.text = "Enemy 3 hit with Sword Dance for " + baseAttack * 3 + " CRITICAL HIT!!";
+            StartCoroutine(WaitForNextEnemy());
         }
 
         if(enemyNumberSelected == 4)
         {
             enemyContainer[3].GetComponent<EnemyHealth>().RemoveHealth(baseAttack * 3);
             sSelect.textResponseArea.text = "Enemy 4 hit with Sword Dance for " + baseAttack * 3 + " CRITICAL HIT!!";
+            StartCoroutine(WaitForNextEnemy());
         }
         
         secondSkillNumberInUse = 0;
@@ -125,27 +147,112 @@ public class CombatScript : MonoBehaviour
     }
     public void SweetSong()
     {
+        GiveAllHeroesHealth(10);
         Debug.Log("Sweet Song Being Used");
         secondSkillNumberInUse = 0;
         skillNumberInUse = 0;
+
+       
     }
 
     public void Ignite()
     {
+        HitAllEnemies(baseAttack * 2);
         Debug.Log("Ignite Being Used");
         skillNumberInUse = 0;
         secondSkillNumberInUse = 0;
+
     }
 
     public void FireBall()
     {
+       
         Debug.Log("Fireball Being Used");
         secondSkillNumberInUse = 0;
         skillNumberInUse = 0;
     }
 
   
-  
+     public void HitAllEnemies(int damage)
+    {
+        StartCoroutine(WaitForNextEnemy());
+        foreach (GameObject gameObject in enemyContainer)
+        {
+            gameObject.GetComponent<EnemyHealth>().RemoveHealth(damage);
+            sSelect.textResponseArea.text = "All enemies hit for " + damage;
+
+        }
+       
+    }
+
+    public void GiveAllHeroesHealth(int amountToGive)
+    {
+        StartCoroutine(WaitForNextEnemy());
+        foreach (GameObject gameObject in heroContainer)
+        {
+            gameObject.GetComponent<HeroHealth>().GiveHealth(amountToGive);
+        }
+       
+    }
+
+    public void EnemyAttacking(int damageToGive, int enemyNumber)
+    {
+        string nameOfEnemy = "";
+        if(enemyNumber == 1)
+        {
+            if (enemyContainer[0] != null)
+                nameOfEnemy = enemyContainer[0].GetComponent<EnemyHealth>().nameForEnemy;
+        }
+        if(enemyNumber == 2)
+        {
+            if (enemyContainer[1] != null)
+                nameOfEnemy = enemyContainer[1].GetComponent<EnemyHealth>().nameForEnemy;
+        }
+        if(enemyNumber == 3)
+        {
+            if (enemyContainer[2] != null)
+                nameOfEnemy = enemyContainer[2].GetComponent<EnemyHealth>().nameForEnemy;
+        }
+        if(enemyNumber == 4)
+        {
+            if(enemyContainer[3] != null)
+            nameOfEnemy = enemyContainer[3].GetComponent<EnemyHealth>().nameForEnemy;
+        }
+        if (sSelect.curEnemy != 6)
+        {
+            int random = UnityEngine.Random.Range(0, 2);
+            sSelect.textResponseArea.text = nameOfEnemy + " is attacking  for " + damageToGive + " damage";
+            hH.RemoveHealth(damageToGive);
+        }
+
+        
+        StartCoroutine(WaitForNextEnemy());
+
+       
+    }
+
+    public static void RemoveAt<T>(ref T[] arr, int index)
+    {
+        for (int a = index; a < arr.Length - 1; a++)
+        {
+            // moving elements downwards, to fill the gap at [index]
+            arr[a] = arr[a + 1];
+        }
+        // finally, let's decrement Array's size by one
+        Array.Resize(ref arr, arr.Length - 1);
+    }
+
+    public void RemoveEnemyFromArray(int enemyNumberToRemove)
+    {
+        RemoveAt(ref enemyContainer, enemyNumberToRemove);
+    }
+
+    IEnumerator WaitForNextEnemy()
+    {
+        yield return new WaitForSeconds(3f);
+        sSelect.GoToNextCombatPhase();
+        yield break;
+    }
 
    
 }
