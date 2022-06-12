@@ -6,7 +6,7 @@ using TMPro;
 
 public class StorySceneRefrences : MonoBehaviour
 {
-
+    
 
     [Header("Party Images")]
     public Image memberContainer1;
@@ -29,6 +29,9 @@ public class StorySceneRefrences : MonoBehaviour
     public Image capeImage;
 
     private bool hasBeenAssignedFirstMember;
+
+    
+
 
     private void Start()
     {

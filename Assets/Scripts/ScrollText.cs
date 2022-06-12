@@ -39,5 +39,6 @@ public class ScrollText : MonoBehaviour
             storyText.text += c;
             yield return new WaitForSeconds(timeToWait);
         }
+       
     }
 }

@@ -40,25 +40,25 @@ public class EnemyHealth : MonoBehaviour
             {
                 sSelect.isEnemyOneAlive = false;
                 cS.RemoveEnemyFromArray(0);
-                Destroy(this.gameObject);
+                
             }
             if(enemyNumber == 2)
             {
                 cS.RemoveEnemyFromArray(1);
                 sSelect.isEnemyTwoAlive = false;
-                Destroy(this.gameObject);
+                
             }
             if(enemyNumber == 3)
             {
                 cS.RemoveEnemyFromArray(2);
                 sSelect.isEnemyThreeAlive = false;
-                Destroy(this.gameObject);
+                
             }
             if(enemyNumber == 4)
             {
                 cS.RemoveEnemyFromArray(3);
                 sSelect.isEnemyFourAlive = false;
-                Destroy(this.gameObject);
+                
             }
            
         }

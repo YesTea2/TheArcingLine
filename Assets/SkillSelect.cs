@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SkillSelect : MonoBehaviour
 {
@@ -255,7 +256,11 @@ public class SkillSelect : MonoBehaviour
     }
     private void Update()
     {
-       
+       if(!isEnemyOneAlive && !isEnemyTwoAlive && !isEnemyThreeAlive && !isEnemyFourAlive)
+        {
+            textResponseArea.text = " Battle Won";
+            StartCoroutine(GoToNextStory());
+        }
     }
 
     public void GoToNextCombatPhase()
@@ -531,6 +536,20 @@ public class SkillSelect : MonoBehaviour
     {
         
         StartCoroutine(CombatTime());
+    }
+
+    void GoToNextScene()
+    {
+        SceneManager.LoadScene(2);
+    }
+
+    IEnumerator GoToNextStory()
+    {
+        yield return new WaitForSeconds(1f);
+        GoToNextScene();
+        StopAllCoroutines();
+        
+
     }
 
 

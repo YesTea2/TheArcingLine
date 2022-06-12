@@ -45,15 +45,27 @@ public class StoryScript : MonoBehaviour
       
     //}
 
+
+    //    story 1 - arc1_x  or arc1_y     if  arc1_x  story 2a    if arc1_y story 2B    if story 2a  arc2_x_choice1  arc2_y_choice2    if story2B  arc2_x_choice3  arc2_y_choice4
+
         private void Start()
     {
-        sT = FindObjectOfType<ScrollText>();
-        curLevel += 1;
-
-        if(curLevel == 1)
+        if (lvlOneChoiceOne)
         {
-            sT.Show(storyTexts[0]);
+            curLevel += 1;
+
         }
+        else if (lvlOneChoiceTwo)
+        {
+            curLevel += 2;
+        }
+
+        sT = FindObjectOfType<ScrollText>();
+       
+
+      
+            sT.Show(storyTexts[curLevel]);
+        
        
     }
 
@@ -61,11 +73,11 @@ public class StoryScript : MonoBehaviour
     {
         if (choiceOneContainer.activeInHierarchy)
         {
-            choiceOneContainer.transform.GetChild(0).GetComponent<TMP_Text>().text = choiceTextsOne[curLevel -1];
+            choiceOneContainer.transform.GetChild(0).GetComponent<TMP_Text>().text = choiceTextsOne[curLevel];
         }
         if (choiceTwoContainer.activeInHierarchy)
         {
-            choiceTwoContainer.transform.GetChild(0).GetComponent<TMP_Text>().text = choiceTextsTwo[curLevel -1];
+            choiceTwoContainer.transform.GetChild(0).GetComponent<TMP_Text>().text = choiceTextsTwo[curLevel];
         }
     }
 
@@ -78,19 +90,19 @@ public class StoryScript : MonoBehaviour
 
     public void ClickedChoiceOne()
     {
-        if(curLevel == 1)
+        if(curLevel == 0)
         {
             lvlOneChoiceOne = true;
             StartCoroutine(EndStoryScene());
            
         }
-        if(curLevel == 2)
+        if(curLevel == 1)
         {
             lvlTwoChoiceOne = true;
             StartCoroutine(EndStoryScene());
 
         }
-        if (curLevel == 3)
+        if (curLevel == 2)
         {
             lvlThreeChoiceOne = true;
             StartCoroutine(EndStoryScene());
@@ -100,19 +112,19 @@ public class StoryScript : MonoBehaviour
 
     public void ClickedChoiceTwo()
     {
-        if(curLevel == 1)
+        if(curLevel == 0)
         {
             lvlOneChoiceTwo = true;
             StartCoroutine(EndStoryScene());
 
         }
-        if (curLevel == 2)
+        if (curLevel == 1)
         {
             lvlTwoChoiceTwo = true;
             StartCoroutine(EndStoryScene());
 
         }
-        if (curLevel == 3)
+        if (curLevel == 2)
         {
             lvlThreeChoiceTwo = true;
             StartCoroutine(EndStoryScene());
@@ -125,6 +137,7 @@ public class StoryScript : MonoBehaviour
         yield return new WaitForSeconds(.1f);
         choiceOneContainer.SetActive(false);
         choiceTwoContainer.SetActive(false);
+        StopAllCoroutines();
         SceneManager.LoadScene(3);
     }
 
