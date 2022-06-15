@@ -11,7 +11,7 @@ public class ScrollText : MonoBehaviour
     public GameObject storyTextContainer;
     public TMP_Text storyText;
     [Header("How Fast To Read Text")]
-    public float timeToWait = .1f;
+    public float timeToWait = .01f;
     private string currentText;
 
 

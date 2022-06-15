@@ -125,7 +125,7 @@ public class StoryScript : MonoBehaviour
         if(choice1 == 3 && !hasAssignedLevelTwo)
         {
            
-            sT.Show(storyTexts[8]);
+            sT.Show(storyTexts[7]);
             hasAssignedLevelTwo = true;
         }
         if(choice2 == 2 && !hasAssignedLevelTwo)
@@ -136,7 +136,7 @@ public class StoryScript : MonoBehaviour
         }
         if(choice2 == 3 && !hasAssignedLevelTwo)
         {
-            sT.Show(storyTexts[7]);
+            sT.Show(storyTexts[8]);
             hasAssignedLevelTwo = true;
         }
 
