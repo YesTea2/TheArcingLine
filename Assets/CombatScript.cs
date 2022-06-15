@@ -20,7 +20,7 @@ public class CombatScript : MonoBehaviour
 
     private int boostedHealthLeft;
 
-    public Image[] enemyImages;
+    public Sprite[] enemyImages;
     public Image[] partyImages;
 
     [HideInInspector]
@@ -31,6 +31,8 @@ public class CombatScript : MonoBehaviour
 
     [HideInInspector]
     public HeroHealth hH;
+
+   
 
     public int skillNumberInUse;
     public int secondSkillNumberInUse;
@@ -43,9 +45,34 @@ public class CombatScript : MonoBehaviour
 
     private void Start()
     {
+        
         hE = FindObjectsOfType<HighlightEnemy>();
         sSelect = FindObjectOfType<SkillSelect>();
         hH = FindObjectOfType<HeroHealth>();
+
+        if(StoryScript.choice1 == 1)
+        {
+            enemyContainer[0].GetComponent<Image>().sprite = enemyImages[0];
+            
+            enemyContainer[0].GetComponent<EnemyHealth>().enemyName.text = "Confused Pub Patron #1";
+            enemyContainer[1].GetComponent<Image>().sprite = enemyImages[1];
+            enemyContainer[1].GetComponent<EnemyHealth>().enemyName.text = "Confused Pub Patron #2";
+            enemyContainer[2].GetComponent<Image>().sprite = enemyImages[2];
+            enemyContainer[2].GetComponent<EnemyHealth>().enemyName.text = "Confused Pub Patron #3";
+            enemyContainer[3].GetComponent<Image>().sprite = enemyImages[3];
+            enemyContainer[3].GetComponent<EnemyHealth>().enemyName.text = "Confused Pub Patron #4";
+        }
+        if(StoryScript.choice2 == 1)
+        {
+            enemyContainer[0].GetComponent<Image>().sprite = enemyImages[4];
+            enemyContainer[0].GetComponent<EnemyHealth>().enemyName.text = "Skeleton Warrior #1";
+            enemyContainer[1].GetComponent<Image>().sprite = enemyImages[5];
+            enemyContainer[1].GetComponent<EnemyHealth>().enemyName.text = "Skeleton Warrior #2";
+            enemyContainer[2].GetComponent<Image>().sprite = enemyImages[6];
+            enemyContainer[2].GetComponent<EnemyHealth>().enemyName.text = "Skeleton Warrior #3";
+            enemyContainer[3].GetComponent<Image>().sprite = enemyImages[7];
+            enemyContainer[3].GetComponent<EnemyHealth>().enemyName.text = "Skeleton Warrior #4";
+        }
         
     }
 
@@ -58,7 +85,7 @@ public class CombatScript : MonoBehaviour
             if (enemyContainer[0] == enabled)
             {
                 enemyContainer[0].GetComponent<EnemyHealth>().RemoveHealth(baseAttack);
-                sSelect.textResponseArea.text = "Enemy 1 hit with a basic attack for " + baseAttack;
+                sSelect.textCombatResponse.text = enemyContainer[0].GetComponent<EnemyHealth>().enemyName.text + " hit with a basic attack for " + baseAttack;
                 isUsingBasicAttack = false;
                 StartCoroutine(WaitForNextEnemy());
             }
@@ -69,7 +96,7 @@ public class CombatScript : MonoBehaviour
             if (enemyContainer[1] == enabled)
             {
                 enemyContainer[1].GetComponent<EnemyHealth>().RemoveHealth(baseAttack);
-                sSelect.textResponseArea.text = "Enemy 2 hit with a basic attack for " + baseAttack;
+                sSelect.textCombatResponse.text = enemyContainer[1].GetComponent<EnemyHealth>().enemyName.text + " hit with a basic attack for " + baseAttack;
                 isUsingBasicAttack = false;
                 StartCoroutine(WaitForNextEnemy());
             }
@@ -80,7 +107,7 @@ public class CombatScript : MonoBehaviour
             if (enemyContainer[2] == enabled)
             {
                 enemyContainer[2].GetComponent<EnemyHealth>().RemoveHealth(baseAttack);
-                sSelect.textResponseArea.text = "Enemy 3 hit with a basic attack for " + baseAttack;
+                sSelect.textCombatResponse.text = enemyContainer[2].GetComponent<EnemyHealth>().enemyName.text + " hit with a basic attack for " + baseAttack;
                 isUsingBasicAttack = false;
                 StartCoroutine(WaitForNextEnemy());
             }
@@ -90,7 +117,7 @@ public class CombatScript : MonoBehaviour
             if (enemyContainer[3] == enabled)
             {
                 enemyContainer[3].GetComponent<EnemyHealth>().RemoveHealth(baseAttack);
-                sSelect.textResponseArea.text = "Enemy 4 hit with a basic attack for " + baseAttack;
+                sSelect.textCombatResponse.text = enemyContainer[3].GetComponent<EnemyHealth>().enemyName.text + " hit with a basic attack for " + baseAttack;
                 isUsingBasicAttack = false;
                 StartCoroutine(WaitForNextEnemy());
             }
@@ -124,7 +151,7 @@ public class CombatScript : MonoBehaviour
             if (enemyContainer[0] == enabled)
             {
                 enemyContainer[0].GetComponent<EnemyHealth>().RemoveHealth(baseAttack * 3);
-                sSelect.textResponseArea.text = "Enemy 1 hit with Sword Dance for " + baseAttack * 3 + " CRITICAL HIT!!";
+                sSelect.textCombatResponse.text = enemyContainer[0].GetComponent<EnemyHealth>().enemyName.text + " hit with Sword Dance for " + baseAttack * 3 + " CRITICAL HIT!!";
                 StartCoroutine(WaitForNextEnemy());
             }
         }
@@ -133,7 +160,7 @@ public class CombatScript : MonoBehaviour
             if (enemyContainer[1] == enabled)
             {
                 enemyContainer[1].GetComponent<EnemyHealth>().RemoveHealth(baseAttack * 3);
-                sSelect.textResponseArea.text = "Enemy 2 hit with Sword Dance for " + baseAttack * 3 + " CRITICAL HIT!!";
+                sSelect.textCombatResponse.text = enemyContainer[1].GetComponent<EnemyHealth>().enemyName.text + " hit with Sword Dance for " + baseAttack * 3 + " CRITICAL HIT!!";
                 StartCoroutine(WaitForNextEnemy());
             }
         }
@@ -143,7 +170,7 @@ public class CombatScript : MonoBehaviour
             if (enemyContainer[2] == enabled)
             {
                 enemyContainer[2].GetComponent<EnemyHealth>().RemoveHealth(baseAttack * 3);
-                sSelect.textResponseArea.text = "Enemy 3 hit with Sword Dance for " + baseAttack * 3 + " CRITICAL HIT!!";
+                sSelect.textCombatResponse.text = enemyContainer[2].GetComponent<EnemyHealth>().enemyName.text + " hit with Sword Dance for " + baseAttack * 3 + " CRITICAL HIT!!";
                 StartCoroutine(WaitForNextEnemy());
             }
         }
@@ -153,7 +180,7 @@ public class CombatScript : MonoBehaviour
             if (enemyContainer[3] == enabled)
             {
                 enemyContainer[3].GetComponent<EnemyHealth>().RemoveHealth(baseAttack * 3);
-                sSelect.textResponseArea.text = "Enemy 4 hit with Sword Dance for " + baseAttack * 3 + " CRITICAL HIT!!";
+                sSelect.textCombatResponse.text = enemyContainer[3].GetComponent<EnemyHealth>().enemyName.text + " hit with Sword Dance for " + baseAttack * 3 + " CRITICAL HIT!!";
                 StartCoroutine(WaitForNextEnemy());
             }
         }
@@ -203,7 +230,7 @@ public class CombatScript : MonoBehaviour
         foreach (GameObject gameObject in enemyContainer)
         {
             gameObject.GetComponent<EnemyHealth>().RemoveHealth(damage);
-            sSelect.textResponseArea.text = "All enemies hit for " + damage;
+            sSelect.textCombatResponse.text = "All enemies hit for " + damage;
 
         }
        
@@ -275,7 +302,10 @@ public class CombatScript : MonoBehaviour
 
     IEnumerator WaitForNextEnemy()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
+        sSelect.textCombatResponse.text = "";
+        sSelect.textResponseArea.text = "";
+        yield return new WaitForSeconds(.1f);
         sSelect.GoToNextCombatPhase();
         yield break;
     }

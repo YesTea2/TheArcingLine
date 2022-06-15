@@ -35,6 +35,7 @@ public class CharacterSelectButtons : MonoBehaviour
     [Header("Player Name Refrence")]
     public TMP_InputField inputField;
     public TextMeshProUGUI playerText;
+    public TextMeshProUGUI endResponseText;
 
     [Header("Random Name Array")]
     public string[] randomNames;
@@ -80,8 +81,10 @@ public class CharacterSelectButtons : MonoBehaviour
         }
         else if(inputField.text != "")
         {
+            
             playerName = inputField.text;
-            textBox.text = "Great " + playerName.ToString() + " now it is time for you to recruit a traveling party";
+            endResponseText.text = playerName;
+            textBox.text = "<size=5.5> Now that the hero has a name it is time to choose a traveling party";
             StartCoroutine(TimeForNewScene());
         }
         

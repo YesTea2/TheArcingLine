@@ -30,7 +30,7 @@ public class StorySceneRefrences : MonoBehaviour
 
     private bool hasBeenAssignedFirstMember;
 
-    
+
 
 
     private void Start()

@@ -234,8 +234,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50.91, y: -50.45703}
-  m_SizeDelta: {x: 101.82, y: 61.884}
+  m_AnchoredPosition: {x: 48.9, y: -47.9}
+  m_SizeDelta: {x: 90, y: 51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &195754888
 MonoBehaviour:
@@ -306,15 +306,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6226415, g: 0.5823371, b: 0.53746885, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: fd039928ff2ee1443be711c8b03172f9, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -365,8 +365,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.0000038146973, y: 0}
+  m_SizeDelta: {x: -22.41513, y: -16.38165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &377837883
 MonoBehaviour:
@@ -397,8 +397,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4285638868
+  m_fontColor: {r: 0.8301887, g: 0.6600392, b: 0.44250622, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -415,12 +415,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 6
-  m_fontSizeBase: 6
+  m_fontSize: 4
+  m_fontSizeBase: 4
   m_fontWeight: 400
   m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMin: 4
+  m_fontSizeMax: 6
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -692,8 +692,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.040276, y: -54.888798}
-  m_SizeDelta: {x: 186.46768, y: 50.55483}
+  m_AnchoredPosition: {x: 2.0970013, y: -50.155254}
+  m_SizeDelta: {x: 223.43396, y: 52.68032}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &686374906
 MonoBehaviour:
@@ -724,8 +724,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4284660462
+  m_fontColor: {r: 0.9339623, g: 0.7287486, b: 0.383277, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -742,12 +742,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 6
-  m_fontSizeBase: 6
+  m_fontSize: 4
+  m_fontSizeBase: 4
   m_fontWeight: 400
   m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMin: 4
+  m_fontSizeMax: 6
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
@@ -977,7 +977,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -2.06409, y: -49.859386}
-  m_SizeDelta: {x: 252.07812, y: 87.46474}
+  m_SizeDelta: {x: 252, y: 87}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &842372189
 MonoBehaviour:
@@ -992,14 +992,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5283019, g: 0.5208259, b: 0.5208259, a: 1}
+  m_Color: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 3bcc5061026ff2940a5df21029b97827, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1054,7 +1054,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -1.8421, y: -87.462}
-  m_SizeDelta: {x: 35.15625, y: 12.25903}
+  m_SizeDelta: {x: 39, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &931082715
 MonoBehaviour:
@@ -1069,14 +1069,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 1}
+  m_Color: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 78a98afe4cf6b2f4391442f5ab76f33c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1186,8 +1186,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -52.214, y: -50.457}
-  m_SizeDelta: {x: 104.43, y: 61.885}
+  m_AnchoredPosition: {x: -54.8, y: -47.9}
+  m_SizeDelta: {x: 90, y: 51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &993859219
 MonoBehaviour:
@@ -1258,15 +1258,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6226415, g: 0.5823371, b: 0.53746885, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: fd039928ff2ee1443be711c8b03172f9, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1452,6 +1452,8 @@ RectTransform:
   - {fileID: 396267216}
   - {fileID: 1453620262}
   - {fileID: 1074443814}
+  - {fileID: 1398314058}
+  - {fileID: 2078234427}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1609,6 +1611,108 @@ RectTransform:
   m_AnchoredPosition: {x: -72.00001, y: 45.5}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1398314057
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1069697743}
+    m_Modifications:
+    - target: {fileID: 6128573464119499569, guid: 1dfdde1ef3f63eb47a6ce56cedd06e62, type: 3}
+      propertyPath: m_Name
+      value: Image (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128573464119499574, guid: 1dfdde1ef3f63eb47a6ce56cedd06e62, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128573464119499574, guid: 1dfdde1ef3f63eb47a6ce56cedd06e62, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128573464119499574, guid: 1dfdde1ef3f63eb47a6ce56cedd06e62, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128573464119499574, guid: 1dfdde1ef3f63eb47a6ce56cedd06e62, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128573464119499574, guid: 1dfdde1ef3f63eb47a6ce56cedd06e62, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128573464119499574, guid: 1dfdde1ef3f63eb47a6ce56cedd06e62, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128573464119499574, guid: 1dfdde1ef3f63eb47a6ce56cedd06e62, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128573464119499574, guid: 1dfdde1ef3f63eb47a6ce56cedd06e62, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 35.92292
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128573464119499574, guid: 1dfdde1ef3f63eb47a6ce56cedd06e62, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 251.06909
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128573464119499574, guid: 1dfdde1ef3f63eb47a6ce56cedd06e62, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128573464119499574, guid: 1dfdde1ef3f63eb47a6ce56cedd06e62, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128573464119499574, guid: 1dfdde1ef3f63eb47a6ce56cedd06e62, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128573464119499574, guid: 1dfdde1ef3f63eb47a6ce56cedd06e62, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128573464119499574, guid: 1dfdde1ef3f63eb47a6ce56cedd06e62, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128573464119499574, guid: 1dfdde1ef3f63eb47a6ce56cedd06e62, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128573464119499574, guid: 1dfdde1ef3f63eb47a6ce56cedd06e62, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128573464119499574, guid: 1dfdde1ef3f63eb47a6ce56cedd06e62, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 174.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128573464119499574, guid: 1dfdde1ef3f63eb47a6ce56cedd06e62, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.00040007
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128573464119499574, guid: 1dfdde1ef3f63eb47a6ce56cedd06e62, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128573464119499574, guid: 1dfdde1ef3f63eb47a6ce56cedd06e62, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128573464119499574, guid: 1dfdde1ef3f63eb47a6ce56cedd06e62, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1dfdde1ef3f63eb47a6ce56cedd06e62, type: 3}
+--- !u!224 &1398314058 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6128573464119499574, guid: 1dfdde1ef3f63eb47a6ce56cedd06e62, type: 3}
+  m_PrefabInstance: {fileID: 1398314057}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1409062204
 GameObject:
   m_ObjectHideFlags: 0
@@ -1791,8 +1895,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279440147
-  m_fontColor: {r: 0.0754717, g: 0.0754717, b: 0.0754717, a: 1}
+    rgba: 4283938537
+  m_fontColor: {r: 0.9150943, g: 0.71181536, b: 0.34100214, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1982,16 +2086,76 @@ MonoBehaviour:
   storyTexts:
   - Welcome Adventures I am just testing to make sure this text is going to be read
     by the script
-  - You Chose Choice 1 last time
-  - You Chose Choice 2 last time
+  - ' When the party enters the pub they hear a large crowed yelling something about
+    their king.<br> As the party gets closer to the crowed the loudest one of the
+    group aproachs the party and starts screaming acusations about the party being
+    spys for a necromancer'
+  - ' After roaming through the forest for multiple weeks the parties supplies had
+    started to dwindle down and the threat of starvation and dehydration had become
+    a real possability.<br> Just as the party was starting to give up hope that they
+    were going to make it to their destination they came across a abandoned farmstead.<br>
+    Desprate for water and maybe something to eat the party headed into the farmstead.<br>
+    As the party opened the doors to the farmstead they could hear the unmistakable
+    scraping sounds of bones rubbing together'
+  - ' After your party stunned the patrons that attacked, the one that was being
+    the loudest out of the group stumbled towards your party.<br> "I am sorry adventurers,
+    our kingdom has been under a attack by a powerful necromancer and none of us
+    know who we can trust anymore. We have nothing to offer you but please hear our
+    plea, we need help of strong fighters like yourselves, will you help aid us in
+    fighting back this evil?" '
+  - 'Once all of the skeletons had been destroyed the party started to search the
+    farmstead for the supplies needed to continue on their journey. <br>You headed
+    to the back of the farmstead and started to search thru the leftover burlap sacks.
+    As you reached into the second sack you felt something hard and rectacular, something
+    that would not be food. <br> You pulled the object from the sack to realize it
+    was a book with thick carvings of some form of runic lettering etched in almost
+    as deep as the cover was thick. '
+  - ' Your party and the patrons from the pub start making their way to the towns
+    graveyard on the outskirts of the bordering walls. As the group gets closer to
+    the graveyard the sky seems to darken and a mist rolls across the ground, there
+    is no doubt about this place a great evil is present. <br>The townsman that once
+    seemed so brave look at your party with fear in their eyes. The one that was
+    the loudest says " I am sorry but none of us will go any further, we have seen
+    what happens to those that challenge the necromancer but we have guided you to
+    the source" <br> the crowd of people that once followed along turn and make haste
+    back thru the towns gates. Knowing that no good adventurer would go back on their
+    word the party presses on into the graveyard. <br> As they approach the mosolium 
+    near the center they start to hear the shuffling of what sounds like a group
+    of people sliding their feet across the ground'
+  - ' You tells the crowd that you will not help and the party turns to leave the
+    pub. The entire pub stands in a uproar "HOW COULD YOU TELL US NO!!"  " YOUR ADVENTURERS
+    ARE YOU NOT!!"  the crowd becomes louder and louder until someone in the crowd
+    screams "ATTACK THEM!!!" everyone in the crowed gets swept up in the commotion.
+    Your party tries to leave the pub but the biggest one out the crowed steps in
+    front of the door, its apparent you wont be able to leave without a fight '
+  - '  As you cracks open the spine of the book a loud boom can be heard overhead,
+    alarmed the party runs outside to see what it could have been.  <br> The Sky
+    that once was blue has turned the darkest shade of grey as if it happened in
+    a instant, the party starts to look all around to see what could be happening.
+    Back to the south from the direction that they had come from smoke can be seen
+    billowing from the tree line. Seeing a call for aid the party quickly takes haste
+    back thru the forest to the town that they once passed by'
+  - ' With the book in bag the party heads back to the path they were following and
+    start making their way further north and into the dessert that was ahead.  <br>
+    After traveling for another days time you notice that their is a humming coming
+    fromyour travel bag. Once you opened the bag it was obviouse the source of the
+    humming was coming from the book that was now radiating a red light. <br> The
+    humming started to become louder and the book started to pulse with a fierce
+    vibration. The sand around the party started to kick up as if someone was tossing
+    it into the air, the amount of sand being tossed up became so thick it was like
+    trying to look thru a wall. But then just as fast as it started, the book stopped
+    pulsing, the light that was casting dimmed and the sand fell. <br> Only there
+    was something, someone standing in front of the party behind where the sand wall
+    once stood'
   choiceTextsOne:
-  - Please Help Us
-  - last time chose 1 yadayda
-  - last time you chose 2 yadayada
+  - Enter the city and head towards the pub
+  - Agree to help the town and head towards graveyard
+  - 'Sit for a while and read a few pages from the book before embarking back on
+    your journey '
   choiceTextsTwo:
-  - Please Kill Them
-  - last time chose 1 yadayada
-  - last time you chose 2 yadayda
+  - Continue thru the forest towards their destination
+  - 'Tell the the crowd of people that have gathered no and leave the pub '
+  - 'Put the book in your traveling bag and embark back on your journey '
   choiceOneContainer: {fileID: 993859217}
   choiceTwoContainer: {fileID: 195754886}
   sT: {fileID: 0}
@@ -2087,7 +2251,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1666610048
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2286,6 +2450,108 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2048751729}
   m_CullTransparentMesh: 1
+--- !u!1001 &2078234426
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1069697743}
+    m_Modifications:
+    - target: {fileID: 4423471534739431517, guid: b4cf2b9ed4e246447b8082678f2aebd5, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423471534739431517, guid: b4cf2b9ed4e246447b8082678f2aebd5, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423471534739431517, guid: b4cf2b9ed4e246447b8082678f2aebd5, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423471534739431517, guid: b4cf2b9ed4e246447b8082678f2aebd5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423471534739431517, guid: b4cf2b9ed4e246447b8082678f2aebd5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423471534739431517, guid: b4cf2b9ed4e246447b8082678f2aebd5, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423471534739431517, guid: b4cf2b9ed4e246447b8082678f2aebd5, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423471534739431517, guid: b4cf2b9ed4e246447b8082678f2aebd5, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 35.92292
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423471534739431517, guid: b4cf2b9ed4e246447b8082678f2aebd5, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 251.06909
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423471534739431517, guid: b4cf2b9ed4e246447b8082678f2aebd5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423471534739431517, guid: b4cf2b9ed4e246447b8082678f2aebd5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423471534739431517, guid: b4cf2b9ed4e246447b8082678f2aebd5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423471534739431517, guid: b4cf2b9ed4e246447b8082678f2aebd5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423471534739431517, guid: b4cf2b9ed4e246447b8082678f2aebd5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423471534739431517, guid: b4cf2b9ed4e246447b8082678f2aebd5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423471534739431517, guid: b4cf2b9ed4e246447b8082678f2aebd5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423471534739431517, guid: b4cf2b9ed4e246447b8082678f2aebd5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -176.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423471534739431517, guid: b4cf2b9ed4e246447b8082678f2aebd5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.00040007
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423471534739431517, guid: b4cf2b9ed4e246447b8082678f2aebd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423471534739431517, guid: b4cf2b9ed4e246447b8082678f2aebd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423471534739431517, guid: b4cf2b9ed4e246447b8082678f2aebd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423471534739431518, guid: b4cf2b9ed4e246447b8082678f2aebd5, type: 3}
+      propertyPath: m_Name
+      value: Image (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b4cf2b9ed4e246447b8082678f2aebd5, type: 3}
+--- !u!224 &2078234427 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4423471534739431517, guid: b4cf2b9ed4e246447b8082678f2aebd5, type: 3}
+  m_PrefabInstance: {fileID: 2078234426}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2089989369
 GameObject:
   m_ObjectHideFlags: 0
@@ -2395,8 +2661,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.0000038146973, y: -0.0000019073486}
+  m_SizeDelta: {x: -26.02274, y: -16.02474}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2105919785
 MonoBehaviour:
@@ -2427,8 +2693,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4285638868
+  m_fontColor: {r: 0.8301887, g: 0.6600392, b: 0.44250622, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2445,12 +2711,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 6
-  m_fontSizeBase: 6
+  m_fontSize: 4
+  m_fontSizeBase: 4
   m_fontWeight: 400
   m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMin: 4
+  m_fontSizeMax: 5
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512

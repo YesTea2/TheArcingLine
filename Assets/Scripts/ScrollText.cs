@@ -19,7 +19,7 @@ public class ScrollText : MonoBehaviour
 
     public void Show(string text)
     {
-        storyTextContainer.SetActive(true);
+        //storyTextContainer.SetActive(true);
         currentText = text;
         StartCoroutine(DisplayText());
     }
@@ -27,7 +27,7 @@ public class ScrollText : MonoBehaviour
     public void Close()
     {
         StopAllCoroutines();
-        storyTextContainer.SetActive(false);
+        storyText.text = "";
     }
 
     IEnumerator DisplayText()

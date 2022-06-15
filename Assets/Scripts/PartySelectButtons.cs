@@ -29,7 +29,7 @@ public class PartySelectButtons : MonoBehaviour
 
     [Header("Confirm Button")]
     public TMP_Text confirmButtonText;
-
+    public GameObject thisButton;
 
     private bool hunterSelected;
     private bool rougeSelected;
@@ -50,6 +50,7 @@ public class PartySelectButtons : MonoBehaviour
     public static bool notSelectedMage;
     public static bool notSelectedBard;
     public static int[] arrayClassNumbers = new int[2];
+    public static int levelCarryOver = 0;
 
     private int classNumber;
     private int amountSelected;
@@ -228,7 +229,7 @@ public class PartySelectButtons : MonoBehaviour
                 {
                     classTextContainer.text = "<size=4>Hunter Has Joined Party";
                     hunterButton.enabled = false;
-                    hunterClassButton.color = new Color32(115, 115, 115, 255);
+                    hunterClassButton.color = new Color32(56, 33, 0, 255);
                     hunterSelected = false;
 
                     if (arrayClassNumbers[0] == 0)
@@ -242,13 +243,14 @@ public class PartySelectButtons : MonoBehaviour
                     amountSelected += 1;
                     canNotSelectHunter = true;
                     notSelectedHunter = false;
+                    StartCoroutine(ClearText());
                 }
 
                 if (rougeSelected && !canNotSelectRouge)
                 {
                     classTextContainer.text = "<size=4>Rouge Has Joined Party";
                     rougeButton.enabled = false;
-                    rougeClassButton.color = new Color32(115, 115, 115, 255);
+                    rougeClassButton.color = new Color32(56, 33, 0, 255);
                     rougeSelected = false;
 
                     if (arrayClassNumbers[0] == 0)
@@ -262,14 +264,14 @@ public class PartySelectButtons : MonoBehaviour
                     amountSelected += 1;
                     canNotSelectRouge = true;
                     notSelectedRouge = false;
+                    StartCoroutine(ClearText());
                 }
 
                 if (swordsmanSelected && !canNotSelectSwordsman)
                 {
                     classTextContainer.text = "<size=4>Swordsman Has Joined Party";
                     swordsmanButton.enabled = false;
-                    swordsmanClassButton.color = new Color32(115, 115, 115, 255);
-                    swordsmanSelected = false;
+                    swordsmanClassButton.color = new Color32(56, 33, 0, 255);
 
                     if (arrayClassNumbers[0] == 0)
                     {
@@ -282,13 +284,14 @@ public class PartySelectButtons : MonoBehaviour
                     amountSelected += 1;
                     canNotSelectSwordsman = true;
                     notSelectedSwordsman = false;
+                    StartCoroutine(ClearText());
                 }
 
                 if (bardSelected && !canNotSelectBard)
                 {
                     classTextContainer.text = "<size=4>Bard Has Joined Party";
                     bardButton.enabled = false;
-                    bardClassButton.color = new Color32(115, 115, 115, 255);
+                    bardClassButton.color = new Color32(56, 33, 0, 255);
                     bardSelected = false;
 
                     if (arrayClassNumbers[0] == 0)
@@ -302,13 +305,14 @@ public class PartySelectButtons : MonoBehaviour
                     amountSelected += 1;
                     canNotSelectBard = true;
                     notSelectedBard = false;
+                    StartCoroutine(ClearText());
                 }
 
                 if (mageSelected && !canNotSelectMage)
                 {
                     classTextContainer.text = "<size=4>Mage Has Joined Party";
                     mageButton.enabled = false;
-                    mageClassButton.color = new Color32(115, 115, 115, 255);
+                    mageClassButton.color = new Color32(56, 33, 0, 255);
                     mageSelected = false;
 
                     if (arrayClassNumbers[0] == 0)
@@ -323,6 +327,7 @@ public class PartySelectButtons : MonoBehaviour
                     amountSelected += 1;
                     canNotSelectMage = true;
                     notSelectedMage = false;
+                    StartCoroutine(ClearText());
                 }
 
 
@@ -341,17 +346,38 @@ public class PartySelectButtons : MonoBehaviour
         }
         else if (adventureReady)
         {
-            SceneManager.LoadScene(2);
+
+            EndScene();
         }
       
     }
 
     IEnumerator PartySelected()
     {
-        yield return new WaitForSeconds(1f);
+        thisButton.SetActive(false);
+        classTextContainer.text = "";
+        yield return new WaitForSeconds(.1f);
         classTextContainer.text = "<size=5>And So The party Was Formed";
-        confirmButtonText.text = "Start Adventure";
-        adventureReady = true;
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(2);
+    }
+
+    IEnumerator ClearText()
+    {
+        if (amountSelected != 2)
+        {
+            yield return new WaitForSeconds(1.5f);
+            classTextContainer.text = "<size=4>Select your second party member";
+            yield break;
+        }
+        else { yield break; }
+
+    }
+
+    void EndScene()
+    {
+        thisButton.SetActive(false);
+        SceneManager.LoadScene(2);
     }
     
 }

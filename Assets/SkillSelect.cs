@@ -31,12 +31,15 @@ public class SkillSelect : MonoBehaviour
 
     [Header("Skill Refs")]
     public string[] attackSkills;
+    public string[] basicAttacks;
     public TextMeshProUGUI skillTextOne;
     public TextMeshProUGUI skillTextTwo;
+    public TextMeshProUGUI skillTextThree;
 
     [Header("Text Responses")]
     public TextMeshProUGUI textResponseArea;
     public TextMeshProUGUI heroAttacking;
+    public TextMeshProUGUI textCombatResponse;
 
     [Header("Skill Flavor Text")]
     public string[] skillFlavorText;
@@ -276,7 +279,8 @@ public class SkillSelect : MonoBehaviour
             heroAttacking.text = "Hunters turn to attack";
             SetSkillTextOne(attackSkills[0], 1 , 0);
             SetSkillTextTwo(attackSkills[1], 1, 1);
-           
+            SetSkillTextThree(basicAttacks[0]);
+
         }
         else if (isRougeAttacking && memberAttacking == 2)
         {
@@ -284,7 +288,8 @@ public class SkillSelect : MonoBehaviour
             heroAttacking.text = "Rouges turn to attack";
             SetSkillTextOne(attackSkills[2], 2, 2);
             SetSkillTextTwo(attackSkills[3], 2 , 3);
-            
+            SetSkillTextThree(basicAttacks[1]);
+
         }
         else if (isSwordsmanAttacking && memberAttacking == 3)
         {
@@ -292,7 +297,8 @@ public class SkillSelect : MonoBehaviour
             heroAttacking.text = "Swordsmans turn to attack";
             SetSkillTextOne(attackSkills[4], 3, 4);
             SetSkillTextTwo(attackSkills[5], 3, 5);
-            
+            SetSkillTextThree(basicAttacks[2]);
+
         }
         else if (isBardAttacking && memberAttacking == 4)
         {
@@ -300,6 +306,7 @@ public class SkillSelect : MonoBehaviour
             heroAttacking.text = "Bards turn to attack";
             SetSkillTextOne(attackSkills[6], 4, 6);
             SetSkillTextTwo(attackSkills[7], 4, 7);
+            SetSkillTextThree(basicAttacks[3]);
            
         }
         else if (isMageAttacking && memberAttacking == 5)
@@ -308,7 +315,8 @@ public class SkillSelect : MonoBehaviour
             heroAttacking.text = "Mages turn to attack";
             SetSkillTextOne(attackSkills[8], 5, 8);
             SetSkillTextTwo(attackSkills[9], 5, 9);
-            
+            SetSkillTextThree(basicAttacks[4]);
+
         }
 
     }
@@ -321,7 +329,8 @@ public class SkillSelect : MonoBehaviour
             heroAttacking.text = "Hunters turn to attack";
             SetSkillTextOne(attackSkills[0], 1, 0);
             SetSkillTextTwo(attackSkills[1], 1, 1);
-            
+            SetSkillTextThree(basicAttacks[0]);
+
         }
         if (secondMemberAttacking == 2)
         {
@@ -329,7 +338,8 @@ public class SkillSelect : MonoBehaviour
             heroAttacking.text = "Rouges turn to attack";
             SetSkillTextOne(attackSkills[2], 2, 2);
             SetSkillTextTwo(attackSkills[3], 2, 3);
-            
+            SetSkillTextThree(basicAttacks[1]);
+
         }
         if ( secondMemberAttacking == 3)
         {
@@ -337,7 +347,8 @@ public class SkillSelect : MonoBehaviour
             heroAttacking.text = "Swordsmans turn to attack";
             SetSkillTextOne(attackSkills[4], 3, 4);
             SetSkillTextTwo(attackSkills[5], 3, 5);
-           
+            SetSkillTextThree(basicAttacks[2]);
+
         }
         if (secondMemberAttacking == 4)
         {
@@ -345,7 +356,8 @@ public class SkillSelect : MonoBehaviour
             heroAttacking.text = "Bards turn to attack";
             SetSkillTextOne(attackSkills[6], 4, 6);
             SetSkillTextTwo(attackSkills[7], 4, 7);
-           
+            SetSkillTextThree(basicAttacks[3]);
+
         }
         if (secondMemberAttacking == 5)
         {
@@ -353,7 +365,8 @@ public class SkillSelect : MonoBehaviour
             heroAttacking.text = "Mages turn to attack";
             SetSkillTextOne(attackSkills[8], 5, 8);
             SetSkillTextTwo(attackSkills[9], 5, 9);
-            
+            SetSkillTextThree(basicAttacks[4]);
+
         }
     }
 
@@ -364,27 +377,35 @@ public class SkillSelect : MonoBehaviour
         {
             SetSkillTextOne(attackSkills[4], 3, 4);
             SetSkillTextTwo(attackSkills[5], 3, 5);
+            SetSkillTextThree(basicAttacks[2]);
         }
         if(CharacterSelectButtons.classSelected == 1)
         {
             SetSkillTextOne(attackSkills[8], 5, 8);
             SetSkillTextTwo(attackSkills[9], 5, 9);
+            SetSkillTextThree(basicAttacks[4]);
         }
         if(CharacterSelectButtons.classSelected == 2)
         {
             SetSkillTextOne(attackSkills[6], 4, 6);
             SetSkillTextTwo(attackSkills[7], 4, 7);
+            SetSkillTextThree(basicAttacks[3]);
         }
         if(CharacterSelectButtons.classSelected == 3)
         {
             SetSkillTextOne(attackSkills[0], 1, 0);
             SetSkillTextTwo(attackSkills[1], 1, 1);
+            SetSkillTextThree(basicAttacks[0]);
         }
         partyAttacking = false;
         enemyAttacking = true;
        
 
        
+    }
+    void SetSkillTextThree(string textToDisplay)
+    {
+        skillTextThree.text = textToDisplay;
     }
 
     void SetSkillTextOne(string textToDisplay, int skillUsed,  int numberForArray)
@@ -473,13 +494,13 @@ public class SkillSelect : MonoBehaviour
 
             if(curEnemy == 1 && isEnemyOneAlive)
             {
-                textResponseArea.text = "Enemy 1 is attacking";
+                heroAttacking.text = "Enemy 1 is attacking";
                 FirstEnemyPhase();
                 yield break;
             }
             else if (curEnemy == 2 && isEnemyTwoAlive)
             {
-                textResponseArea.text = "Enemy 2 is attacking";
+                heroAttacking.text = "Enemy 2 is attacking";
                 SecondEnemyPhase();
                 yield break;
 
@@ -487,13 +508,13 @@ public class SkillSelect : MonoBehaviour
 
             else if (curEnemy == 3 && isEnemyThreeAlive)
             {
-                textResponseArea.text = "Enemy 3 is attacking";
+               heroAttacking.text = "Enemy 3 is attacking";
                 ThirdEnemyPhase();
 
             }
             else if (curEnemy == 4 && isEnemyFourAlive)
             {
-                textResponseArea.text = "Enemy 4 is attacking";
+                heroAttacking.text = "Enemy 4 is attacking";
                 curEnemy += 1;
                 FourthEnemyPhase();
                 yield break;
@@ -540,6 +561,8 @@ public class SkillSelect : MonoBehaviour
 
     void GoToNextScene()
     {
+        StopAllCoroutines();
+        PartySelectButtons.levelCarryOver = 1;
         SceneManager.LoadScene(2);
     }
 
@@ -547,7 +570,7 @@ public class SkillSelect : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         GoToNextScene();
-        StopAllCoroutines();
+       
         
 
     }

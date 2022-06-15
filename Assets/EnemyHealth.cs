@@ -25,7 +25,7 @@ public class EnemyHealth : MonoBehaviour
     private void Start()
     {
         currentHealth = startingHealth;
-        enemyName.text = nameForEnemy;
+       
         sSelect = FindObjectOfType<SkillSelect>();
         cS = FindObjectOfType<CombatScript>();
         SetMaxhealth(startingHealth);
@@ -33,6 +33,7 @@ public class EnemyHealth : MonoBehaviour
 
     private void Update()
     {
+        nameForEnemy = enemyName.text;
         textForHealth.text = currentHealth.ToString() + " / " + startingHealth.ToString();
         if (currentHealth <= 0)
         {
