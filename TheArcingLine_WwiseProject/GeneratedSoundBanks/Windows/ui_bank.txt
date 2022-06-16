@@ -1,0 +1,9 @@
+Event	ID	Name			Wwise Object Path	Notes
+	73961094	ui_back_event			\Default Work Unit\ui_back_event	
+	893562230	dialogue_event			\Default Work Unit\dialogue_event	
+	2528159659	ui_click_event			\Default Work Unit\ui_click_event	
+	3667070125	ui_hover_event			\Default Work Unit\ui_hover_event	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	280636101	dialogue	A:\Games\TheArcingLine\TheArcingLine_WwiseProject\.cache\Windows\SFX\sfx_ui_dialogue_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\dialogue		12848
+

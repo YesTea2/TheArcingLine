@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{4FE56DD2-A6E3-4915-B8A5-C9905640CEFA}" SchemaVersion="103">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{4FE56DD2-A6E3-4915-B8A5-C9905640CEFA}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{4FE56DD2-A6E3-4915-B8A5-C9905640CEFA}" PersistMode="Standalone">
+			<ChildrenList>
+				<ActorMixer Name="UI" ID="{EAEA0064-C089-4920-A0A7-39F680E6B8FA}" ShortID="909775811">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="2"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4EC1F11-27B5-498D-9419-B7F4F683E468}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{746DC485-F66F-4353-A5E8-2FCF95FD54A7}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="dialogue" ID="{767A554D-7E31-43B1-8559-4F12943937FF}" ShortID="609934402">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4EC1F11-27B5-498D-9419-B7F4F683E468}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{746DC485-F66F-4353-A5E8-2FCF95FD54A7}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_ui_dialogue" ID="{0047E2B3-1D25-495F-8F4B-D8614A28BD70}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_ui_dialogue.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="280636101"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_ui_dialogue" ID="{0047E2B3-1D25-495F-8F4B-D8614A28BD70}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>

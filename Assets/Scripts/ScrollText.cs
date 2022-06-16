@@ -13,7 +13,7 @@ public class ScrollText : MonoBehaviour
     [Header("How Fast To Read Text")]
     public float timeToWait = .01f;
     private string currentText;
-
+    private GameObject wwiseObject = GameObject.Find("WwiseGlobal");
 
 
 
@@ -37,6 +37,7 @@ public class ScrollText : MonoBehaviour
         foreach(char c in currentText.ToCharArray())
         {
             storyText.text += c;
+            AkSoundEngine.PostEvent("dialogue_event", wwiseObject);
             yield return new WaitForSeconds(timeToWait);
         }
        

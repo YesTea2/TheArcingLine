@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>A:\Games\TheArcingLine\TheArcingLine_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>A:\Games\TheArcingLine\TheArcingLine_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>A:\Games\TheArcingLine\TheArcingLine_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>A:\Games\TheArcingLine\TheArcingLine_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX" Hash="3690994985">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1546231383" Language="SFX" Hash="3755779931">
+			<ObjectPath>\SoundBanks\Default Work Unit\music_bank</ObjectPath>
+			<ShortName>music_bank</ShortName>
+			<Path>music_bank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3069803190" Name="play_music_event" ObjectPath="\Events\Default Work Unit\play_music_event" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3935460844" Name="stop_music_event" ObjectPath="\Events\Default Work Unit\stop_music_event" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+			</IncludedEvents>
+		</SoundBank>
+		<SoundBank Id="1839668536" Language="SFX" Hash="3638271968">
+			<ObjectPath>\SoundBanks\Default Work Unit\ui_bank</ObjectPath>
+			<ShortName>ui_bank</ShortName>
+			<Path>ui_bank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="893562230" Name="dialogue_event" ObjectPath="\Events\Default Work Unit\dialogue_event" DurationType="OneShot" DurationMin="0.066583" DurationMax="0.066583">
+					<IncludedMemoryFiles>
+						<File Id="280636101" Language="SFX">
+							<ShortName>sfx_ui_dialogue.wav</ShortName>
+							<Path>SFX\sfx_ui_dialogue_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="73961094" Name="ui_back_event" ObjectPath="\Events\Default Work Unit\ui_back_event" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2528159659" Name="ui_click_event" ObjectPath="\Events\Default Work Unit\ui_click_event" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3667070125" Name="ui_hover_event" ObjectPath="\Events\Default Work Unit\ui_hover_event" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+			</IncludedEvents>
+		</SoundBank>
+		<SoundBank Id="3820128371" Language="SFX" Hash="707323170">
+			<ObjectPath>\SoundBanks\Default Work Unit\player_bank</ObjectPath>
+			<ShortName>player_bank</ShortName>
+			<Path>player_bank.bnk</Path>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{50B65515-325E-4DAD-888D-84BE68C56E90}" SchemaVersion="103">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{50B65515-325E-4DAD-888D-84BE68C56E90}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{50B65515-325E-4DAD-888D-84BE68C56E90}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="play_music_event" ID="{8BF1A604-195A-4B01-A982-B01BFB852E9D}"/>
+				<Event Name="stop_music_event" ID="{6C14C7FD-765C-47B6-9E8F-1C2CC3133E3B}"/>
+				<Event Name="ui_click_event" ID="{736D1CA6-5B3B-442A-92C6-BD58B83F8470}"/>
+				<Event Name="ui_hover_event" ID="{6B506824-E971-4C49-BE8F-1556DF0D9C43}"/>
+				<Event Name="ui_back_event" ID="{90F46CDD-269D-4B77-9145-79CF79C68AF8}"/>
+				<Event Name="dialogue_event" ID="{14A237E1-9EE6-4C04-8444-20F28AFC4157}">
+					<ChildrenList>
+						<Action Name="" ID="{85E5E069-6D05-4BB0-8DE5-F2210FE3A813}" ShortID="1067259204">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="dialogue" ID="{767A554D-7E31-43B1-8559-4F12943937FF}" WorkUnitID="{4FE56DD2-A6E3-4915-B8A5-C9905640CEFA}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>
