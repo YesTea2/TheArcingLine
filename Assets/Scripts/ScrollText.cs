@@ -32,11 +32,15 @@ public class ScrollText : MonoBehaviour
     IEnumerator DisplayText()
     {
         storyText.text = "";
-
+        int index = 0;
         foreach(char c in currentText.ToCharArray())
         {
             storyText.text += c;
-            AkSoundEngine.PostEvent("dialogue_event", GameObject.Find("WwiseGlobal"));
+            if (index%4==0)
+            {
+                AkSoundEngine.PostEvent("dialogue_event", GameObject.Find("WwiseGlobal"));   
+            }
+            index++;
             yield return new WaitForSeconds(timeToWait);
         }
        
