@@ -122,7 +122,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 1555b6505e32ad4d888d84be68c56e90
     GuidInternal: 
-    m_lastTime: -8585462616663472253
+    m_lastTime: -8585462602541375513
     List:
     - name: dialogue_event
       guid: e137a214e69e044c844420f28afc4157
@@ -139,8 +139,8 @@ MonoBehaviour:
         guid: e137a214e69e044c844420f28afc4157
       Path: Events\Default Work Unit\dialogue_event
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 0.066583
+      minDuration: 0.066583
     - name: play_music_event
       guid: 04a6f18b5a19014ba982b01bfb852e9d
       id: 3069803190
