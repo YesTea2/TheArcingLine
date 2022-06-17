@@ -20,6 +20,11 @@ public class StoryScript : MonoBehaviour
     [HideInInspector]
     public ScrollText sT;
 
+    [Header("Background Images")]
+    public Image bgImage;
+    public Color[] colorsForBackground;
+    public GameObject[] backgroundObjects;
+
     static int curLevel;
 
     static bool lvlOneChoiceOne;
@@ -57,12 +62,14 @@ public class StoryScript : MonoBehaviour
         if (curLevel == 0)
         {
             sT.Show(storyTexts[curLevel]);
+            bgImage.color = colorsForBackground[0];
         }
         
         if(choice1 == 1)
         {
             
             sT.Show(storyTexts[3]);
+
         }
         
         if(choice2 == 1)
@@ -103,12 +110,35 @@ public class StoryScript : MonoBehaviour
         if (lvlOneChoiceOne && !hasAssignedLevelOne)
         {
             choice1 = 1;
+            bgImage.color = colorsForBackground[1];
+            backgroundObjects[0].SetActive(false);
+            backgroundObjects[1].SetActive(false);
+            backgroundObjects[2].SetActive(false);
+            backgroundObjects[3].SetActive(false);
+            backgroundObjects[4].SetActive(false);
+            backgroundObjects[5].SetActive(true);
+            backgroundObjects[6].SetActive(true);
+            backgroundObjects[7].SetActive(true);
+            backgroundObjects[8].SetActive(true);
+            backgroundObjects[9].SetActive(true);
+
+
+
+
             sT.Show(storyTexts[1]);
             hasAssignedLevelOne = true;
 
         }
         else if (lvlOneChoiceTwo && !hasAssignedLevelOne)
         {
+            bgImage.color = colorsForBackground[2];
+            backgroundObjects[0].SetActive(false);
+            backgroundObjects[1].SetActive(false);
+            backgroundObjects[2].SetActive(false);
+            backgroundObjects[3].SetActive(false);
+            backgroundObjects[4].SetActive(false);
+            backgroundObjects[11].SetActive(true);
+           
             choice2 = 1;
             sT.Show(storyTexts[2]);
             hasAssignedLevelOne = true;
@@ -153,6 +183,8 @@ public class StoryScript : MonoBehaviour
                 sT.Close();
                 choiceOneContainer.SetActive(true);
                 choiceTwoContainer.SetActive(true);
+
+                
             }
             else if (hasAssignedLevelOne)
             {

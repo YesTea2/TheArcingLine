@@ -28,6 +28,8 @@ public class StorySceneRefrences : MonoBehaviour
     public Image weaponImage;
     public Image capeImage;
 
+\
+
     private bool hasBeenAssignedFirstMember;
 
 
