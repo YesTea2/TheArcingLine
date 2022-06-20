@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 7393c5e1994e3342b4ba735b9547e2e8
     GuidInternal: 
-    m_lastTime: -8585462534136001673
+    m_lastTime: -8585459225413948263
     List:
     - name: music_bank
       guid: f6f91f5f7a741d4ba1a47c5b849ccd48
@@ -122,7 +122,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 1555b6505e32ad4d888d84be68c56e90
     GuidInternal: 
-    m_lastTime: -8585462534136301671
+    m_lastTime: -8585459225414078296
     List:
     - name: dialogue_event
       guid: e137a214e69e044c844420f28afc4157
@@ -134,16 +134,19 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 1555b6505e32ad4d888d84be68c56e90
+      - ElementName: UI
+        ObjectType: 4
+        guid: e1323e6209497e42a1ec87978ae2a1b2
       - ElementName: dialogue_event
         ObjectType: 3
         guid: e137a214e69e044c844420f28afc4157
-      Path: Events\Default Work Unit\dialogue_event
+      Path: Events\Default Work Unit\UI\dialogue_event
       maxAttenuation: 0
-      maxDuration: 0.085356
-      minDuration: 0.085356
-    - name: play_music_event
-      guid: 04a6f18b5a19014ba982b01bfb852e9d
-      id: 3069803190
+      maxDuration: 0.372083
+      minDuration: 0.249458
+    - name: Music
+      guid: 6d04c57386b68d41855eb5f4c798f0b0
+      id: 3991942870
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -151,16 +154,36 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 1555b6505e32ad4d888d84be68c56e90
-      - ElementName: play_music_event
+      - ElementName: Music
+        ObjectType: 4
+        guid: 6d04c57386b68d41855eb5f4c798f0b0
+      Path: Events\Default Work Unit\Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: p_clothing_select_event
+      guid: c8d2a5e50636cd40aeb9c0b7cbb27947
+      id: 365965104
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1555b6505e32ad4d888d84be68c56e90
+      - ElementName: UI
+        ObjectType: 4
+        guid: e1323e6209497e42a1ec87978ae2a1b2
+      - ElementName: p_clothing_select_event
         ObjectType: 3
-        guid: 04a6f18b5a19014ba982b01bfb852e9d
-      Path: Events\Default Work Unit\play_music_event
+        guid: c8d2a5e50636cd40aeb9c0b7cbb27947
+      Path: Events\Default Work Unit\UI\p_clothing_select_event
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: stop_music_event
-      guid: fdc7146c5c76b6479e8f1c2cc3133e3b
-      id: 3935460844
+      maxDuration: 0.5
+      minDuration: 0.45
+    - name: play_mus_combat_event
+      guid: 740f44ce1eb8cb498f06b92511b4c723
+      id: 2733484991
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -168,13 +191,93 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 1555b6505e32ad4d888d84be68c56e90
-      - ElementName: stop_music_event
+      - ElementName: Music
+        ObjectType: 4
+        guid: 6d04c57386b68d41855eb5f4c798f0b0
+      - ElementName: play_mus_combat_event
+        ObjectType: 3
+        guid: 740f44ce1eb8cb498f06b92511b4c723
+      Path: Events\Default Work Unit\Music\play_mus_combat_event
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: play_mus_theme_event
+      guid: 1d673173007fcd40beea0e6e33e69c67
+      id: 157167704
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1555b6505e32ad4d888d84be68c56e90
+      - ElementName: Music
+        ObjectType: 4
+        guid: 6d04c57386b68d41855eb5f4c798f0b0
+      - ElementName: play_mus_theme_event
+        ObjectType: 3
+        guid: 1d673173007fcd40beea0e6e33e69c67
+      Path: Events\Default Work Unit\Music\play_mus_theme_event
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: stop_mus_combat_event
+      guid: fdc7146c5c76b6479e8f1c2cc3133e3b
+      id: 2763876149
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1555b6505e32ad4d888d84be68c56e90
+      - ElementName: Music
+        ObjectType: 4
+        guid: 6d04c57386b68d41855eb5f4c798f0b0
+      - ElementName: stop_mus_combat_event
         ObjectType: 3
         guid: fdc7146c5c76b6479e8f1c2cc3133e3b
-      Path: Events\Default Work Unit\stop_music_event
+      Path: Events\Default Work Unit\Music\stop_mus_combat_event
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: stop_mus_theme_event
+      guid: daa1a5d6c6b0334ba17219791476d595
+      id: 1881324534
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1555b6505e32ad4d888d84be68c56e90
+      - ElementName: Music
+        ObjectType: 4
+        guid: 6d04c57386b68d41855eb5f4c798f0b0
+      - ElementName: stop_mus_theme_event
+        ObjectType: 3
+        guid: daa1a5d6c6b0334ba17219791476d595
+      Path: Events\Default Work Unit\Music\stop_mus_theme_event
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: UI
+      guid: e1323e6209497e42a1ec87978ae2a1b2
+      id: 1551306167
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1555b6505e32ad4d888d84be68c56e90
+      - ElementName: UI
+        ObjectType: 4
+        guid: e1323e6209497e42a1ec87978ae2a1b2
+      Path: Events\Default Work Unit\UI
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: ui_back_event
       guid: dd6cf4909d26774b914579cf79c68af8
       id: 73961094
@@ -185,10 +288,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 1555b6505e32ad4d888d84be68c56e90
+      - ElementName: UI
+        ObjectType: 4
+        guid: e1323e6209497e42a1ec87978ae2a1b2
       - ElementName: ui_back_event
         ObjectType: 3
         guid: dd6cf4909d26774b914579cf79c68af8
-      Path: Events\Default Work Unit\ui_back_event
+      Path: Events\Default Work Unit\UI\ui_back_event
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -202,13 +308,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 1555b6505e32ad4d888d84be68c56e90
+      - ElementName: UI
+        ObjectType: 4
+        guid: e1323e6209497e42a1ec87978ae2a1b2
       - ElementName: ui_click_event
         ObjectType: 3
         guid: a61c6d733b5b2a4492c6bd58b83f8470
-      Path: Events\Default Work Unit\ui_click_event
+      Path: Events\Default Work Unit\UI\ui_click_event
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 0.482167
+      minDuration: 0.294771
     - name: ui_hover_event
       guid: 2468506b71e9494cbe8f1556df0d9c43
       id: 3667070125
@@ -219,13 +328,36 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 1555b6505e32ad4d888d84be68c56e90
+      - ElementName: UI
+        ObjectType: 4
+        guid: e1323e6209497e42a1ec87978ae2a1b2
       - ElementName: ui_hover_event
         ObjectType: 3
         guid: 2468506b71e9494cbe8f1556df0d9c43
-      Path: Events\Default Work Unit\ui_hover_event
+      Path: Events\Default Work Unit\UI\ui_hover_event
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: ui_next_event
+      guid: 58f6e0e13263364cab6e05e0a1c3ef74
+      id: 1394287572
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1555b6505e32ad4d888d84be68c56e90
+      - ElementName: UI
+        ObjectType: 4
+        guid: e1323e6209497e42a1ec87978ae2a1b2
+      - ElementName: ui_next_event
+        ObjectType: 3
+        guid: 58f6e0e13263364cab6e05e0a1c3ef74
+      Path: Events\Default Work Unit\UI\ui_next_event
+      maxAttenuation: 0
+      maxDuration: 1
+      minDuration: 1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -252,8 +384,74 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 70edf0bed45dc94ab3f9f6213f235196
     GuidInternal: 
-    m_lastTime: -8585466434264541316
-    List: []
+    m_lastTime: -8585459230836941458
+    List:
+    - name: Game
+      guid: abfef28909b9c84aba55f2ca8fa07008
+      id: 702482391
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 70edf0bed45dc94ab3f9f6213f235196
+      - ElementName: Game
+        ObjectType: 9
+        guid: abfef28909b9c84aba55f2ca8fa07008
+      Path: States\Default Work Unit\Game
+      values:
+      - name: Combat
+        guid: 2c8d83a6e4f4a14a9b43a7fafc4c9489
+        id: 2764240573
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 70edf0bed45dc94ab3f9f6213f235196
+        - ElementName: Game
+          ObjectType: 9
+          guid: abfef28909b9c84aba55f2ca8fa07008
+        - ElementName: Combat
+          ObjectType: 8
+          guid: 2c8d83a6e4f4a14a9b43a7fafc4c9489
+      - name: None
+        guid: f163dc750e6ac740b420e9dd43295efe
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 70edf0bed45dc94ab3f9f6213f235196
+        - ElementName: Game
+          ObjectType: 9
+          guid: abfef28909b9c84aba55f2ca8fa07008
+        - ElementName: None
+          ObjectType: 8
+          guid: f163dc750e6ac740b420e9dd43295efe
+      - name: Story
+        guid: 00233c7c397f1848a1926cf47a5dfb7a
+        id: 1686739444
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 70edf0bed45dc94ab3f9f6213f235196
+        - ElementName: Game
+          ObjectType: 9
+          guid: abfef28909b9c84aba55f2ca8fa07008
+        - ElementName: Story
+          ObjectType: 8
+          guid: 00233c7c397f1848a1926cf47a5dfb7a
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -283,7 +481,7 @@ MonoBehaviour:
     m_lastTime: -8585466434264501290
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0c0000000d000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

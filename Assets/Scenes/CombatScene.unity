@@ -4321,6 +4321,7 @@ GameObject:
   - component: {fileID: 1794700902}
   - component: {fileID: 1794700901}
   - component: {fileID: 1794700903}
+  - component: {fileID: 1794700904}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -4385,6 +4386,30 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 3c430cab21d682e4ebd97fa8f976881b, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
+--- !u!114 &1794700904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794700900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e66389cd8b9cc75418b342529cefb6c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d5444e8bdc6ba774fbef1af6d58dc7c2, type: 2}
   decodeBank: 0
   loadAsynchronous: 0
   saveDecodedBank: 0

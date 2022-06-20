@@ -297,6 +297,9 @@ public class StoryScript : MonoBehaviour
         choiceTwoContainer.SetActive(false);
         StopAllCoroutines();
         SceneManager.LoadScene(3);
+        AkSoundEngine.PostEvent("stop_mus_combat_event", GameObject.Find("WwiseGlobal"));
+        AkSoundEngine.PostEvent("stop_mus_theme_event", GameObject.Find("WwiseGlobal"));
+        AkSoundEngine.PostEvent("play_mus_combat_event", GameObject.Find("WwiseGlobal"));
     }
 
 

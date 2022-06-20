@@ -1,9 +1,26 @@
 Event	ID	Name			Wwise Object Path	Notes
-	73961094	ui_back_event			\Default Work Unit\ui_back_event	
-	893562230	dialogue_event			\Default Work Unit\dialogue_event	
-	2528159659	ui_click_event			\Default Work Unit\ui_click_event	
-	3667070125	ui_hover_event			\Default Work Unit\ui_hover_event	
+	73961094	ui_back_event			\Default Work Unit\UI\ui_back_event	
+	365965104	p_clothing_select_event			\Default Work Unit\UI\p_clothing_select_event	
+	893562230	dialogue_event			\Default Work Unit\UI\dialogue_event	
+	1394287572	ui_next_event			\Default Work Unit\UI\ui_next_event	
+	2528159659	ui_click_event			\Default Work Unit\UI\ui_click_event	
+	3667070125	ui_hover_event			\Default Work Unit\UI\ui_hover_event	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	280636101	dialogue	A:\Games\TheArcingLine\TheArcingLine_WwiseProject\.cache\Windows\SFX\sfx_ui_dialogue_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\dialogue		12848
+	18512464	p_clothing_select__02	A:\Games\TheArcingLine\TheArcingLine_WwiseProject\.cache\Windows\SFX\ui_clothing_select_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\clothing_select\p_clothing_select__02		86464
+	155731479	dialogue__03	A:\Games\TheArcingLine\TheArcingLine_WwiseProject\.cache\Windows\SFX\dialogue_write_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ui_dialogue\dialogue__03		64876
+	220703992	dialogue__04	A:\Games\TheArcingLine\TheArcingLine_WwiseProject\.cache\Windows\SFX\dialogue_write_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ui_dialogue\dialogue__04		59276
+	248932420	ui_click__01	A:\Games\TheArcingLine\TheArcingLine_WwiseProject\.cache\Windows\SFX\ui_click_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ui_click\ui_click__01		73724
+	433669699	dialogue__07	A:\Games\TheArcingLine\TheArcingLine_WwiseProject\.cache\Windows\SFX\dialogue_write_07_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ui_dialogue\dialogue__07		71504
+	554722420	ui_next	A:\Games\TheArcingLine\TheArcingLine_WwiseProject\.cache\Windows\SFX\ui_next_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ui_next		192064
+	600219563	p_clothing_select__03	A:\Games\TheArcingLine\TheArcingLine_WwiseProject\.cache\Windows\SFX\ui_clothing_select_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\clothing_select\p_clothing_select__03		96064
+	624404027	p_clothing_select__04	A:\Games\TheArcingLine\TheArcingLine_WwiseProject\.cache\Windows\SFX\ui_clothing_select_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\clothing_select\p_clothing_select__04		96064
+	653548108	p_clothing_select__01	A:\Games\TheArcingLine\TheArcingLine_WwiseProject\.cache\Windows\SFX\ui_clothing_select_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\clothing_select\p_clothing_select__01		96064
+	671673032	dialogue__01	A:\Games\TheArcingLine\TheArcingLine_WwiseProject\.cache\Windows\SFX\dialogue_write_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ui_dialogue\dialogue__01		51012
+	683855515	ui_click__03	A:\Games\TheArcingLine\TheArcingLine_WwiseProject\.cache\Windows\SFX\ui_click_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ui_click\ui_click__03		56660
+	710777483	dialogue__02	A:\Games\TheArcingLine\TheArcingLine_WwiseProject\.cache\Windows\SFX\dialogue_write_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ui_dialogue\dialogue__02		47960
+	837525833	dialogue__06	A:\Games\TheArcingLine\TheArcingLine_WwiseProject\.cache\Windows\SFX\dialogue_write_06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ui_dialogue\dialogue__06		70868
+	857206549	ui_click__02	A:\Games\TheArcingLine\TheArcingLine_WwiseProject\.cache\Windows\SFX\ui_click_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ui_click\ui_click__02		92640
+	1012698078	p_clothing_select__05	A:\Games\TheArcingLine\TheArcingLine_WwiseProject\.cache\Windows\SFX\ui_clothing_select_05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\clothing_select\p_clothing_select__05		96064
+	1048615881	dialogue__05	A:\Games\TheArcingLine\TheArcingLine_WwiseProject\.cache\Windows\SFX\dialogue_write_05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ui_dialogue\dialogue__05		55944
 

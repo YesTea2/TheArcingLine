@@ -11,36 +11,123 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3690994985">
+		<SoundBank Id="1355168291" Language="SFX" Hash="222934380">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1546231383" Language="SFX" Hash="3755779931">
+		<SoundBank Id="1546231383" Language="SFX" Hash="3644349370">
 			<ObjectPath>\SoundBanks\Default Work Unit\music_bank</ObjectPath>
 			<ShortName>music_bank</ShortName>
 			<Path>music_bank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3069803190" Name="play_music_event" ObjectPath="\Events\Default Work Unit\play_music_event" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="3935460844" Name="stop_music_event" ObjectPath="\Events\Default Work Unit\stop_music_event" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2733484991" Name="play_mus_combat_event" ObjectPath="\Events\Default Work Unit\Music\play_mus_combat_event" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="73972416" Language="SFX">
+							<ShortName>mus_enter_combat_theme.wav</ShortName>
+							<Path>SFX\mus_enter_combat_theme_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="157167704" Name="play_mus_theme_event" ObjectPath="\Events\Default Work Unit\Music\play_mus_theme_event" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="450624492" Language="SFX">
+							<ShortName>mus_the_arcing_line_theme.wav</ShortName>
+							<Path>SFX\mus_the_arcing_line_theme_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2763876149" Name="stop_mus_combat_event" ObjectPath="\Events\Default Work Unit\Music\stop_mus_combat_event" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1881324534" Name="stop_mus_theme_event" ObjectPath="\Events\Default Work Unit\Music\stop_mus_theme_event" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="1839668536" Language="SFX" Hash="3843694691">
+		<SoundBank Id="1839668536" Language="SFX" Hash="4285760066">
 			<ObjectPath>\SoundBanks\Default Work Unit\ui_bank</ObjectPath>
 			<ShortName>ui_bank</ShortName>
 			<Path>ui_bank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="893562230" Name="dialogue_event" ObjectPath="\Events\Default Work Unit\dialogue_event" DurationType="OneShot" DurationMin="0.085356" DurationMax="0.085356">
+				<Event Id="893562230" Name="dialogue_event" ObjectPath="\Events\Default Work Unit\UI\dialogue_event" DurationType="OneShot" DurationMin="0.249458" DurationMax="0.372083">
 					<IncludedMemoryFiles>
-						<File Id="280636101" Language="SFX">
-							<ShortName>sfx_ui_dialogue.wav</ShortName>
-							<Path>SFX\sfx_ui_dialogue_10C4C929.wem</Path>
+						<File Id="155731479" Language="SFX">
+							<ShortName>dialogue_write_03.wav</ShortName>
+							<Path>SFX\dialogue_write_03_10C4C929.wem</Path>
+						</File>
+						<File Id="220703992" Language="SFX">
+							<ShortName>dialogue_write_04.wav</ShortName>
+							<Path>SFX\dialogue_write_04_10C4C929.wem</Path>
+						</File>
+						<File Id="433669699" Language="SFX">
+							<ShortName>dialogue_write_07.wav</ShortName>
+							<Path>SFX\dialogue_write_07_10C4C929.wem</Path>
+						</File>
+						<File Id="671673032" Language="SFX">
+							<ShortName>dialogue_write_01.wav</ShortName>
+							<Path>SFX\dialogue_write_01_10C4C929.wem</Path>
+						</File>
+						<File Id="710777483" Language="SFX">
+							<ShortName>dialogue_write_02.wav</ShortName>
+							<Path>SFX\dialogue_write_02_10C4C929.wem</Path>
+						</File>
+						<File Id="837525833" Language="SFX">
+							<ShortName>dialogue_write_06.wav</ShortName>
+							<Path>SFX\dialogue_write_06_10C4C929.wem</Path>
+						</File>
+						<File Id="1048615881" Language="SFX">
+							<ShortName>dialogue_write_05.wav</ShortName>
+							<Path>SFX\dialogue_write_05_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="73961094" Name="ui_back_event" ObjectPath="\Events\Default Work Unit\ui_back_event" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="2528159659" Name="ui_click_event" ObjectPath="\Events\Default Work Unit\ui_click_event" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="3667070125" Name="ui_hover_event" ObjectPath="\Events\Default Work Unit\ui_hover_event" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="365965104" Name="p_clothing_select_event" ObjectPath="\Events\Default Work Unit\UI\p_clothing_select_event" DurationType="OneShot" DurationMin="0.45" DurationMax="0.5">
+					<IncludedMemoryFiles>
+						<File Id="18512464" Language="SFX">
+							<ShortName>ui_clothing_select_02.wav</ShortName>
+							<Path>SFX\ui_clothing_select_02_10C4C929.wem</Path>
+						</File>
+						<File Id="600219563" Language="SFX">
+							<ShortName>ui_clothing_select_03.wav</ShortName>
+							<Path>SFX\ui_clothing_select_03_10C4C929.wem</Path>
+						</File>
+						<File Id="624404027" Language="SFX">
+							<ShortName>ui_clothing_select_04.wav</ShortName>
+							<Path>SFX\ui_clothing_select_04_10C4C929.wem</Path>
+						</File>
+						<File Id="653548108" Language="SFX">
+							<ShortName>ui_clothing_select_01.wav</ShortName>
+							<Path>SFX\ui_clothing_select_01_10C4C929.wem</Path>
+						</File>
+						<File Id="1012698078" Language="SFX">
+							<ShortName>ui_clothing_select_05.wav</ShortName>
+							<Path>SFX\ui_clothing_select_05_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="73961094" Name="ui_back_event" ObjectPath="\Events\Default Work Unit\UI\ui_back_event" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2528159659" Name="ui_click_event" ObjectPath="\Events\Default Work Unit\UI\ui_click_event" DurationType="OneShot" DurationMin="0.294771" DurationMax="0.482167">
+					<IncludedMemoryFiles>
+						<File Id="248932420" Language="SFX">
+							<ShortName>ui_click_01.wav</ShortName>
+							<Path>SFX\ui_click_01_10C4C929.wem</Path>
+						</File>
+						<File Id="683855515" Language="SFX">
+							<ShortName>ui_click_03.wav</ShortName>
+							<Path>SFX\ui_click_03_10C4C929.wem</Path>
+						</File>
+						<File Id="857206549" Language="SFX">
+							<ShortName>ui_click_02.wav</ShortName>
+							<Path>SFX\ui_click_02_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3667070125" Name="ui_hover_event" ObjectPath="\Events\Default Work Unit\UI\ui_hover_event" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1394287572" Name="ui_next_event" ObjectPath="\Events\Default Work Unit\UI\ui_next_event" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+					<IncludedMemoryFiles>
+						<File Id="554722420" Language="SFX">
+							<ShortName>ui_next.wav</ShortName>
+							<Path>SFX\ui_next_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 			</IncludedEvents>
 		</SoundBank>
 		<SoundBank Id="3820128371" Language="SFX" Hash="707323170">
