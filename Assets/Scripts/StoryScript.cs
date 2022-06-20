@@ -45,18 +45,23 @@ public class StoryScript : MonoBehaviour
         private void Start()
     {
         nameForParty = CharacterSelectButtons.playerName.ToString();
-        storyTexts[0] = "<br><br>  You and your party head to the forest to embark towards the rumors of great fortune to be made towards the north.<br><br> While heading thru the woods you and your party came across a city that is not on their map.<br><Br>   -  " + nameForParty + " and party have a choice to make";
-        //if (lvlOneChoiceOne)
-        //{
-        //    curLevel += 1;
+        storyTexts[0] =  "<br><br>" + nameForParty + " and their party head to the forest to embark towards the rumors of great fortune to be made towards the north.<br><br> While heading thru the woods the party came across a city that is not on any of their maps. <br><br>   -  " + nameForParty + " and party have a choice to make";
+        storyTexts[4] = "<br><br> Once all of the skeletons had been destroyed the party started to search the farmstead for the supplies needed to continue on their journey. <br> " + nameForParty + " headed to the back of the farmstead and started to search thru the leftover burlap sacks. As " + CharacterSelectButtons.playerName.ToString() + " reached into the second sack they felt something hard and rectacular, something that would not be food. <br> " + nameForParty + " pulled the object from the sack to realize it was a book with thick carvings of some form of runic lettering etched in almost as deep as the cover was thick.";
+        storyTexts[5] = "<br><br>" + nameForParty + "s party and the patrons from the pub start making their way to the towns graveyard on the outskirts of the bordering walls. As the group gets closer to the graveyard the sky seems to darken and a mist rolls across the ground, there is no doubt about this place a great evil is present. <br>The townsman that once seemed so brave look at your party with fear in their eyes. The one that was the loudest says \" I am sorry but none of us will go any further, we have seen what happens to those that challenge the necromancer but we have guided you to the source \" <br> the crowd of people that once followed along turn and make haste back thru the towns gates. Knowing that no good adventurer would go back on their word the party presses on into the graveyard. <br> As they approach the mosolium  near the center they start to hear the shuffling of what sounds like a group of people sliding their feet across the ground";
+        storyTexts[6] = "<br><br>" + nameForParty + " tells the crowd that their party will not help and the party turns to leave the pub. The entire pub stands in a uproar \"HOW COULD YOU TELL US NO!!\"  \" YOUR ADVENTURERS ARE YOU NOT!!\"  the crowd becomes louder and louder until someone in the crowd screams \"ATTACK THEM!!!\" everyone in the crowed gets swept up in the commotion. " + nameForParty + "s party tries to leave the pub but the biggest one out the crowed steps in front of the door, its apparent the party wont be able to leave without a fight";
+        storyTexts[7] = "<br><br> As " + nameForParty + " cracks open the spine of the book a loud boom can be heard overhead, alarmed the party runs outside to see what it could have been.  < br > The Sky that once was blue has turned the darkest shade of grey as if it happened in a instant, the party starts to look all around to see what could be happening. Back to the south from the direction that they had come from smoke can be seen billowing from the tree line.Seeing a call for aid the party quickly takes haste back thru the forest to the town that they once passed by";
+        storyTexts[8] = "<br><br> With the book in bag the party heads back to the path they were following and start making their way further north and into the dessert that was ahead.  < br > After traveling for another days time " + nameForParty + " notices that their is a humming coming from their travel bag. Once  they opened the bag it was obviouse the source of the humming was coming from the book that was now radiating a red light. < br > The humming started to become louder and the book started to pulse with a fierce vibration.The sand around the party started to kick up as if someone was tossing it into the air, the amount of sand being tossed up became so thick it was like trying to look thru a wall. But then just as fast as it started, the book stopped pulsing, the light that was casting dimmed and the sand fell. < br > Only there was someone standing in front of the party behind where the sand wall once stood";
+          //if (lvlOneChoiceOne)
+          //{
+          //    curLevel += 1;
 
-        //}
-        //else if (lvlOneChoiceTwo)
-        //{
-        //    curLevel += 2;
-        //}
+          //}
+          //else if (lvlOneChoiceTwo)
+          //{
+          //    curLevel += 2;
+          //}
 
-        sT = FindObjectOfType<ScrollText>();
+          sT = FindObjectOfType<ScrollText>();
 
 
         if (curLevel == 0)
@@ -238,17 +243,17 @@ public class StoryScript : MonoBehaviour
             choiceTwoContainer.SetActive(false);
             curLevel += 1;
         }
-        if(choice1 == 1)
+        if(choice1 == 1 && choice2 < 1)
         {
             choiceOneContainer.SetActive(false);
             choiceTwoContainer.SetActive(false);
-            choice1 += 1;
+            choice1 = 2;
         }
-        if(choice2 == 1)
+        if(choice2 == 1 && choice1 < 1)
         {
             choiceOneContainer.SetActive(false);
             choiceTwoContainer.SetActive(false);
-            choice2 += 1;
+            choice1 = 3;
         }
         //if(curLevel == 1)
         //{
@@ -276,17 +281,17 @@ public class StoryScript : MonoBehaviour
             // StartCoroutine(EndStoryScene());
 
         }
-        if(choice1 == 1)
+        if(choice1 == 1 && choice2 < 1)
         {
             choiceOneContainer.SetActive(false);
             choiceTwoContainer.SetActive(false);
-            choice1 += 2;
+            choice2 = 2;
         }
-        if(choice2 == 1)
+        if(choice2 == 1 && choice1 < 1)
         {
             choiceOneContainer.SetActive(false);
             choiceTwoContainer.SetActive(false);
-            choice2 += 2;
+            choice2  = 3;
         }
         //if (curLevel == 1)
         //{

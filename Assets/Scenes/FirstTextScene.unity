@@ -1066,8 +1066,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.0970013, y: -50.155254}
-  m_SizeDelta: {x: 223.43396, y: 52.68032}
+  m_AnchoredPosition: {x: -1.2471, y: -47.740074}
+  m_SizeDelta: {x: 216.74579, y: 57.51067}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &686374906
 MonoBehaviour:
@@ -2709,8 +2709,8 @@ MonoBehaviour:
     Desprate for water and maybe something to eat the party headed into the the delapitated
     farm.<br> As the party opened the doors to the farmstead a foul odor hit their
     noses and a sound that was unmistakable could be heard of bones rubbing together'
-  - ' After your party stunned the patrons that attacked, the one that was being
-    the loudest out of the group stumbled towards your party.<br> "I am sorry adventurers,
+  - ' After the party stunned the patrons that attacked, the one that was being the
+    loudest out of the group stumbled towards them.<br> "I am sorry adventurers,
     our kingdom has been under a attack by a powerful necromancer and none of us
     know who we can trust anymore. We have nothing to offer you but please hear our
     plea, we need help of strong fighters like yourselves, will you help aid us in
