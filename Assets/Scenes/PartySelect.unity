@@ -3299,11 +3299,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d6c09dc3e98e2041b14af1ea19bef94, type: 3}
---- !u!1 &1490590591 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3732477017761768669, guid: 7d6c09dc3e98e2041b14af1ea19bef94, type: 3}
-  m_PrefabInstance: {fileID: 1490590590}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1534552918
 GameObject:
   m_ObjectHideFlags: 0
@@ -3796,7 +3791,7 @@ MonoBehaviour:
   bardClassButton: {fileID: 927664492}
   mageClassButton: {fileID: 187931651}
   confirmButtonText: {fileID: 7580678480239472554}
-  thisButton: {fileID: 1490590591}
+  thisButton: {fileID: 7580678478722214644}
 --- !u!4 &1922972637
 Transform:
   m_ObjectHideFlags: 0

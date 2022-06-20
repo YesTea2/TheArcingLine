@@ -570,6 +570,7 @@ public class SkillSelect : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         GoToNextScene();
+        yield break;
        
         
 

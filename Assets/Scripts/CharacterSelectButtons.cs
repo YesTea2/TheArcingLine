@@ -258,6 +258,7 @@ public class CharacterSelectButtons : MonoBehaviour
         SceneManager.LoadScene(1);
         AkSoundEngine.PostEvent("stop_mus_theme_event", GameObject.Find("WwiseGlobal"));
         AkSoundEngine.PostEvent("play_mus_theme_event", GameObject.Find("WwiseGlobal"));
+        yield break;
     }
   
 }

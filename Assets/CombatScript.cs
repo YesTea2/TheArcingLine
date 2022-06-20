@@ -302,11 +302,13 @@ public class CombatScript : MonoBehaviour
 
     IEnumerator WaitForNextEnemy()
     {
-        yield return new WaitForSeconds(2f);
-        sSelect.textCombatResponse.text = "";
-        sSelect.textResponseArea.text = "";
+        
+        yield return new WaitForSeconds(.1f);
         yield return new WaitForSeconds(.1f);
         sSelect.GoToNextCombatPhase();
+        yield return new WaitForSeconds(1f);
+        sSelect.textCombatResponse.text = "";
+        sSelect.textResponseArea.text = "";
         yield break;
     }
 

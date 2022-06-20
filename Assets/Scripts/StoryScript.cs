@@ -147,7 +147,25 @@ public class StoryScript : MonoBehaviour
 
         if(choice1 == 2 && !hasAssignedLevelTwo)
         {
-           
+            bgImage.color = colorsForBackground[3];
+            backgroundObjects[0].SetActive(false);
+            backgroundObjects[1].SetActive(false);
+            backgroundObjects[2].SetActive(false);
+            backgroundObjects[3].SetActive(false);
+            backgroundObjects[4].SetActive(false);
+            if (backgroundObjects[5].activeInHierarchy)
+            {
+                backgroundObjects[5].SetActive(false);
+                backgroundObjects[6].SetActive(false);
+                backgroundObjects[7].SetActive(false);
+                backgroundObjects[8].SetActive(false);
+                backgroundObjects[9].SetActive(false);
+            }
+            if (backgroundObjects[11].activeInHierarchy)
+            {
+                backgroundObjects[11].SetActive(false);
+            }
+            backgroundObjects[12].SetActive(true);
             sT.Show(storyTexts[5]);
             hasAssignedLevelTwo = true;
 

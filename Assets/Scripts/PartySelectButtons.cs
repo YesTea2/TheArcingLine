@@ -357,6 +357,7 @@ public class PartySelectButtons : MonoBehaviour
         thisButton.SetActive(false);
         classTextContainer.text = "";
         yield return new WaitForSeconds(.1f);
+        confirmButtonText.enabled = false;
         classTextContainer.text = "<size=5>And So The party Was Formed";
         yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(2);
