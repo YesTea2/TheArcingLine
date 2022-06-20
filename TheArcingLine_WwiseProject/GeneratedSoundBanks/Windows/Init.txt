@@ -1,3 +1,11 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	702482391	Game			\Default Work Unit\Game	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Game			
+	1686739444	Story	Game			
+	2764240573	Combat	Game			
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 

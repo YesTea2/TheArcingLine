@@ -3,22 +3,110 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{50B65515-325E-4DAD-888D-84BE68C56E90}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="play_music_event" ID="{8BF1A604-195A-4B01-A982-B01BFB852E9D}"/>
-				<Event Name="stop_music_event" ID="{6C14C7FD-765C-47B6-9E8F-1C2CC3133E3B}"/>
-				<Event Name="ui_click_event" ID="{736D1CA6-5B3B-442A-92C6-BD58B83F8470}"/>
-				<Event Name="ui_hover_event" ID="{6B506824-E971-4C49-BE8F-1556DF0D9C43}"/>
-				<Event Name="ui_back_event" ID="{90F46CDD-269D-4B77-9145-79CF79C68AF8}"/>
-				<Event Name="dialogue_event" ID="{14A237E1-9EE6-4C04-8444-20F28AFC4157}">
+				<Folder Name="Music" ID="{73C5046D-B686-418D-855E-B5F4C798F0B0}" ShortID="595366600">
 					<ChildrenList>
-						<Action Name="" ID="{85E5E069-6D05-4BB0-8DE5-F2210FE3A813}" ShortID="1067259204">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="dialogue" ID="{767A554D-7E31-43B1-8559-4F12943937FF}" WorkUnitID="{4FE56DD2-A6E3-4915-B8A5-C9905640CEFA}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="stop_mus_combat_event" ID="{6C14C7FD-765C-47B6-9E8F-1C2CC3133E3B}">
+							<ChildrenList>
+								<Action Name="" ID="{C81AF4F9-CB7C-46CC-9CCC-00421881664A}" ShortID="841981517">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="mus_combat" ID="{67AB7CF1-18BA-43C4-B6DC-DC7524B6597F}" WorkUnitID="{4FE56DD2-A6E3-4915-B8A5-C9905640CEFA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_mus_combat_event" ID="{CE440F74-B81E-49CB-8F06-B92511B4C723}">
+							<ChildrenList>
+								<Action Name="" ID="{E64447C4-FC3B-4809-879F-3B840B025962}" ShortID="439884721">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="mus_combat" ID="{67AB7CF1-18BA-43C4-B6DC-DC7524B6597F}" WorkUnitID="{4FE56DD2-A6E3-4915-B8A5-C9905640CEFA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_mus_theme_event" ID="{7331671D-7F00-40CD-BEEA-0E6E33E69C67}">
+							<ChildrenList>
+								<Action Name="" ID="{53C723A4-5790-41CD-A932-89C7D5A13EDD}" ShortID="197351931">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="mus_theme" ID="{6E9F26BD-23B0-4594-A47B-F2F86AC8180C}" WorkUnitID="{4FE56DD2-A6E3-4915-B8A5-C9905640CEFA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="stop_mus_theme_event" ID="{D6A5A1DA-B0C6-4B33-A172-19791476D595}">
+							<ChildrenList>
+								<Action Name="" ID="{D2C38A51-C2D9-4EEE-A2B4-3B46C10031CB}" ShortID="196660057">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="mus_theme" ID="{6E9F26BD-23B0-4594-A47B-F2F86AC8180C}" WorkUnitID="{4FE56DD2-A6E3-4915-B8A5-C9905640CEFA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
-				</Event>
+				</Folder>
+				<Folder Name="UI" ID="{623E32E1-4909-427E-A1EC-87978AE2A1B2}" ShortID="216443560">
+					<ChildrenList>
+						<Event Name="ui_click_event" ID="{736D1CA6-5B3B-442A-92C6-BD58B83F8470}">
+							<ChildrenList>
+								<Action Name="" ID="{879D846B-1D47-4318-9D40-753F11293426}" ShortID="559911470">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ui_click" ID="{253F4883-A6F4-4E51-9707-2F1F8214EA17}" WorkUnitID="{4FE56DD2-A6E3-4915-B8A5-C9905640CEFA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ui_back_event" ID="{90F46CDD-269D-4B77-9145-79CF79C68AF8}"/>
+						<Event Name="dialogue_event" ID="{14A237E1-9EE6-4C04-8444-20F28AFC4157}">
+							<ChildrenList>
+								<Action Name="" ID="{72172E23-12A9-447E-A819-E31043B6382B}" ShortID="719251207">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ui_dialogue" ID="{403D93C4-6D41-458B-B0B2-A7BA48FF7C1C}" WorkUnitID="{4FE56DD2-A6E3-4915-B8A5-C9905640CEFA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ui_hover_event" ID="{6B506824-E971-4C49-BE8F-1556DF0D9C43}"/>
+						<Event Name="p_clothing_select_event" ID="{E5A5D2C8-3606-40CD-AEB9-C0B7CBB27947}">
+							<ChildrenList>
+								<Action Name="" ID="{26D63C07-9872-4BEE-AC93-FF097AECAA0C}" ShortID="803911101">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="clothing_select" ID="{9F9700A0-1E2C-4F93-B0CB-39EEEC1FAB02}" WorkUnitID="{4FE56DD2-A6E3-4915-B8A5-C9905640CEFA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ui_next_event" ID="{E1E0F658-6332-4C36-AB6E-05E0A1C3EF74}">
+							<ChildrenList>
+								<Action Name="" ID="{5746E69B-98AC-4BED-A3D1-E2166AEB65E2}" ShortID="435567022">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ui_next" ID="{0F9358CE-EDC0-4E05-B213-56B6AF325966}" WorkUnitID="{4FE56DD2-A6E3-4915-B8A5-C9905640CEFA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

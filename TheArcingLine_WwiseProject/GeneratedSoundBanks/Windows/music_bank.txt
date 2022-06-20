@@ -1,4 +1,10 @@
 Event	ID	Name			Wwise Object Path	Notes
-	3069803190	play_music_event			\Default Work Unit\play_music_event	
-	3935460844	stop_music_event			\Default Work Unit\stop_music_event	
+	157167704	play_mus_theme_event			\Default Work Unit\Music\play_mus_theme_event	
+	1881324534	stop_mus_theme_event			\Default Work Unit\Music\stop_mus_theme_event	
+	2733484991	play_mus_combat_event			\Default Work Unit\Music\play_mus_combat_event	
+	2763876149	stop_mus_combat_event			\Default Work Unit\Music\stop_mus_combat_event	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	73972416	mus_combat	A:\Games\TheArcingLine\TheArcingLine_WwiseProject\.cache\Windows\SFX\mus_enter_combat_theme_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\mus_combat		10944064
+	450624492	mus_theme	A:\Games\TheArcingLine\TheArcingLine_WwiseProject\.cache\Windows\SFX\mus_the_arcing_line_theme_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\mus_theme		30912064
 

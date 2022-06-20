@@ -7,9 +7,16 @@
 				<Property Name="Event Action List\{14A237E1-9EE6-4C04-8444-20F28AFC4157}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{6B506824-E971-4C49-BE8F-1556DF0D9C43}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{6C14C7FD-765C-47B6-9E8F-1C2CC3133E3B}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{7331671D-7F00-40CD-BEEA-0E6E33E69C67}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{736D1CA6-5B3B-442A-92C6-BD58B83F8470}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{76A3732D-D9D1-4686-84F9-3CCDDF733BC5}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{8BF1A604-195A-4B01-A982-B01BFB852E9D}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{90F46CDD-269D-4B77-9145-79CF79C68AF8}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{BABDF603-D437-49B1-83ED-EBFF31D124D8}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{CE440F74-B81E-49CB-8F06-B92511B4C723}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{D6A5A1DA-B0C6-4B33-A172-19791476D595}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{E1E0F658-6332-4C36-AB6E-05E0A1C3EF74}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{E5A5D2C8-3606-40CD-AEB9-C0B7CBB27947}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>
@@ -30,7 +37,10 @@
 				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value="Ene+vo9kAE+7LQdw6dxaag=="/>
 				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="9vkfX3p0HUuhpHxbhJzNSLkg563NEURAvZ8Z9JpAPe4neVu7D5UtRpQayEYwfY8j"/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}"/>
-				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="ynt+b5JCyEG9zZZ9X20FHAErMcz/////0yj51VBdpU2UQW5b5Kz7FwErMcz/////"/>
+				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="0yj51VBdpU2UQW5b5Kz7FwEr9bz/////ynt+b5JCyEG9zZZ9X20FHAEr9bz/////"/>
+				<Property Name="Interactive Music\x64_{204EE39B-3A89-4B64-95FE-DBF7C1907184} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwP1AOlwGfHBpAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
+				<Property Name="Interactive Music\x64_{516E6C35-9910-4C74-B06D-24BB3823AB51} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwPwAAAAAAbHBAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
+				<Property Name="Interactive Music\x64_{6651696A-D50D-48E8-B438-08B934627B84} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwPwT3EdxHcDJAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="MeterView\LastObject1" Type="string" Value="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 				<Property Name="MeterView\MeterMode1" Type="int32" Value="1"/>
 				<Property Name="MeterView\MeterMode1Viewpoint0" Type="int32" Value="1"/>
@@ -41,6 +51,8 @@
 				<Property Name="MonitoringManager\GameObjectFilter\GameObjectFilterVersion" Type="int32" Value="1"/>
 				<Property Name="MonitoringManager\GameObjectFilter\GameObjectFiltersEnable" Type="bool" Value="True"/>
 				<Property Name="MonitoringManager\GameObjectFilter\x64_GameObjectFilters" Type="string" Value=""/>
+				<Property Name="Music Transition List\{E1D5BABD-FA68-4F60-83B3-2CD943760A1B}\Scroll Position" Type="int32" Value="0"/>
+				<Property Name="Music Transition List\{E1D5BABD-FA68-4F60-83B3-2CD943760A1B}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\FirstVisible_11_1" Type="string" Value="{4C96B38B-3DB4-40C7-91C9-665510E38993}"/>
 				<Property Name="ProjectExplorer\FirstVisible_11_2" Type="string" Value="{4C96B38B-3DB4-40C7-91C9-665510E38993}"/>
 				<Property Name="ProjectExplorer\FirstVisible_12_1" Type="string" Value="{23EC2DE3-3ED8-4B82-AC99-92E25F2E4C6B}"/>

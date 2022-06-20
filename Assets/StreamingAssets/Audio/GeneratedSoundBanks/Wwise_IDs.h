@@ -14,12 +14,32 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID DIALOGUE_EVENT = 893562230U;
-        static const AkUniqueID PLAY_MUSIC_EVENT = 3069803190U;
-        static const AkUniqueID STOP_MUSIC_EVENT = 3935460844U;
+        static const AkUniqueID P_CLOTHING_SELECT_EVENT = 365965104U;
+        static const AkUniqueID PLAY_MUS_COMBAT_EVENT = 2733484991U;
+        static const AkUniqueID PLAY_MUS_THEME_EVENT = 157167704U;
+        static const AkUniqueID STOP_MUS_COMBAT_EVENT = 2763876149U;
+        static const AkUniqueID STOP_MUS_THEME_EVENT = 1881324534U;
         static const AkUniqueID UI_BACK_EVENT = 73961094U;
         static const AkUniqueID UI_CLICK_EVENT = 2528159659U;
         static const AkUniqueID UI_HOVER_EVENT = 3667070125U;
+        static const AkUniqueID UI_NEXT_EVENT = 1394287572U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace GAME
+        {
+            static const AkUniqueID GROUP = 702482391U;
+
+            namespace STATE
+            {
+                static const AkUniqueID COMBAT = 2764240573U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID STORY = 1686739444U;
+            } // namespace STATE
+        } // namespace GAME
+
+    } // namespace STATES
 
     namespace BANKS
     {

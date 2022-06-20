@@ -57,7 +57,6 @@ public class CharacterSelectButtons : MonoBehaviour
     public static CharacterSelectButtons instance;
     private void Awake()
     {
-
         if (instance == null)
             instance = this;
         else
@@ -257,6 +256,8 @@ public class CharacterSelectButtons : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         SceneManager.LoadScene(1);
+        AkSoundEngine.PostEvent("stop_mus_theme_event", GameObject.Find("WwiseGlobal"));
+        AkSoundEngine.PostEvent("play_mus_theme_event", GameObject.Find("WwiseGlobal"));
     }
   
 }

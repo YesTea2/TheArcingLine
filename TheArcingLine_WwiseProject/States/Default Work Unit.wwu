@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{BEF0ED70-5DD4-4AC9-B3F9-F6213F235196}" SchemaVersion="103">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{BEF0ED70-5DD4-4AC9-B3F9-F6213F235196}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{BEF0ED70-5DD4-4AC9-B3F9-F6213F235196}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="Game" ID="{89F2FEAB-B909-4AC8-BA55-F2CA8FA07008}">
+					<ChildrenList>
+						<State Name="None" ID="{75DC63F1-6A0E-40C7-B420-E9DD43295EFE}"/>
+						<State Name="Story" ID="{7C3C2300-7F39-4818-A192-6CF47A5DFB7A}"/>
+						<State Name="Combat" ID="{A6838D2C-F4E4-4AA1-9B43-A7FAFC4C9489}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>
