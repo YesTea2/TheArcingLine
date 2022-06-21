@@ -360,7 +360,7 @@ public class PartySelectButtons : MonoBehaviour
         confirmButtonText.enabled = false;
         classTextContainer.text = "<size=5>And So The party Was Formed";
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 
     IEnumerator ClearText()
@@ -378,7 +378,7 @@ public class PartySelectButtons : MonoBehaviour
     void EndScene()
     {
         thisButton.SetActive(false);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
     
 }

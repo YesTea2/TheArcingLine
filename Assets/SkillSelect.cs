@@ -563,7 +563,7 @@ public class SkillSelect : MonoBehaviour
     {
         StopAllCoroutines();
         PartySelectButtons.levelCarryOver = 1;
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 
     IEnumerator GoToNextStory()

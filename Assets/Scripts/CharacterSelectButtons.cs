@@ -255,7 +255,7 @@ public class CharacterSelectButtons : MonoBehaviour
     IEnumerator TimeForNewScene()
     {
         yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
         AkSoundEngine.PostEvent("stop_mus_theme_event", GameObject.Find("WwiseGlobal"));
         AkSoundEngine.PostEvent("play_mus_theme_event", GameObject.Find("WwiseGlobal"));
         yield break;
