@@ -69,6 +69,7 @@ public class CharacterSelectButtons : MonoBehaviour
         classSelected = 0;
         bodyParts -= 1;
 
+        AkSoundEngine.PostEvent("play_mus_theme_event", GameObject.Find("WwiseGlobal"));
     }
 
 
